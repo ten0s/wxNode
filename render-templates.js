@@ -752,9 +752,7 @@ function renderFile (file, rawJson, callback) {
   fs.readFile(path.join("./src-templates", file.templateFileName), 'utf8', function (err, data) {
     if (err) { throw err; }
 
-    var output = Mustache.compile(data, {
-      space: true
-    })(ctx, null);
+    var output = Mustache.render(data, ctx);
     var outputFilename = path.join("./src-generated", ctx.outputFilename);
     var oldContentsCrc = 0;
     if (path.existsSync(outputFilename)) {

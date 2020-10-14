@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "nodeunit": "~0.6.4",
-    "mustache": "git://github.com/janl/mustache.js.git",
+    "mustache": "git://github.com/janl/mustache.js.git#0.8.0",
     "JSONPath": "~0.8.5",
     "xml2js": "~0.1.13",
     "crc32": "~0.2.2",
