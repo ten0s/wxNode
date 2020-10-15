@@ -5,39 +5,32 @@
 #include "wxNode_wxControl.h"
 #include "wxNode_wxWindow.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxInfoBar::s_ct;
 
-
-
 /*
- * id: _54296
+ * id: _52374
  */
 wxNode_wxInfoBar::wxNode_wxInfoBar()
   : wxInfoBar()
 {
 
 }
-
 /*
- * id: _54297
+ * id: _52375
  */
 wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent, int winid)
   : wxInfoBar(parent, winid)
 {
 
 }
-
 /*
- * id: _54297
+ * id: _52375
  */
 wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent)
   : wxInfoBar(parent)
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxInfoBar::Init(v8::Handle<v8::Object> target) {
@@ -57,12 +50,10 @@ wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent)
 /*static*/ void wxNode_wxInfoBar::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxControl::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "showMessage", _ShowMessage);
-  NODE_SET_PROTOTYPE_METHOD(target, "dismiss", _Dismiss);
-  NODE_SET_PROTOTYPE_METHOD(target, "addButton", _AddButton);
-  NODE_SET_PROTOTYPE_METHOD(target, "removeButton", _RemoveButton);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "dismiss", _Dismiss);
+NODE_SET_PROTOTYPE_METHOD(target, "addButton", _AddButton);
+NODE_SET_PROTOTYPE_METHOD(target, "removeButton", _RemoveButton);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxInfoBar::New(const wxNode_wxInfoBar* obj) {
   v8::HandleScope scope;
@@ -135,48 +126,39 @@ wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent)
 /*static*/ v8::Handle<v8::Value> wxNode_wxInfoBar::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _54296
+   * id: _52374
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxInfoBar *self = new wxNode_wxInfoBar();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _54297
+   * id: _52375
    */
   if(args.Length() == 2 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber()) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int winid = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int winid = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
 
     wxNode_wxInfoBar *self = new wxNode_wxInfoBar(parent, winid);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _54297
+   * id: _52375
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
 
     wxNode_wxInfoBar *self = new wxNode_wxInfoBar(parent);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxInfoBar).\n";
@@ -188,37 +170,31 @@ wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent)
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxInfoBar::_ShowMessage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxInfoBar* self = unwrap<wxNode_wxInfoBar>(args.This());
 
-  
   /*
-   * id: _28198
+   * id: _26607
    */
   if(args.Length() == 2 && args[0]->IsString() && args[1]->IsNumber()) {
-    v8::String::AsciiValue msg(args[0]->ToString()); /* type: _14975  */
-    int flags = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    v8::String::AsciiValue msg(args[0]->ToString()); /* type: _13556  */
+int flags = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     self->ShowMessage(*msg, flags);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _28198
+   * id: _26607
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue msg(args[0]->ToString()); /* type: _14975  */
-    
+    v8::String::AsciiValue msg(args[0]->ToString()); /* type: _13556  */
 
     self->ShowMessage(*msg);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxInfoBar::ShowMessage).\n";
@@ -229,23 +205,19 @@ wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxInfoBar::_Dismiss(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxInfoBar* self = unwrap<wxNode_wxInfoBar>(args.This());
 
-  
   /*
-   * id: _28199
+   * id: _26608
    */
   if(args.Length() == 0) {
     
-
     self->Dismiss();
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxInfoBar::Dismiss).\n";
@@ -256,37 +228,31 @@ wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxInfoBar::_AddButton(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxInfoBar* self = unwrap<wxNode_wxInfoBar>(args.This());
 
-  
   /*
-   * id: _28200
+   * id: _26609
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsString()) {
-    int btnid = (int)args[0]->ToInt32()->Value(); /* type: _8725  */
-    v8::String::AsciiValue label(args[1]->ToString()); /* type: _14975  */
-    
+    int btnid = (int)args[0]->ToInt32()->Value(); /* type: _7944  */
+v8::String::AsciiValue label(args[1]->ToString()); /* type: _13556  */
 
     self->AddButton(btnid, *label);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _28200
+   * id: _26609
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int btnid = (int)args[0]->ToInt32()->Value(); /* type: _8725  */
-    
+    int btnid = (int)args[0]->ToInt32()->Value(); /* type: _7944  */
 
     self->AddButton(btnid);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxInfoBar::AddButton).\n";
@@ -297,24 +263,20 @@ wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxInfoBar::_RemoveButton(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxInfoBar* self = unwrap<wxNode_wxInfoBar>(args.This());
 
-  
   /*
-   * id: _28201
+   * id: _26610
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int btnid = (int)args[0]->ToInt32()->Value(); /* type: _8725  */
-    
+    int btnid = (int)args[0]->ToInt32()->Value(); /* type: _7944  */
 
     self->RemoveButton(btnid);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxInfoBar::RemoveButton).\n";
@@ -325,6 +287,4 @@ wxNode_wxInfoBar::wxNode_wxInfoBar(wxWindow* parent)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

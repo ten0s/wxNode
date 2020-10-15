@@ -6,18 +6,18 @@
 
 class NodeWxApp : public wxApp, public wxNodeObject {
 public:
-  static void Init(v8::Handle<v8::Object> target);
+    static void Init(v8::Handle<v8::Object> target);
 
-  virtual bool OnInit();
+    virtual bool OnInit();
 
 private:
-  static v8::Handle<v8::Value> _loop(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _init(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _run(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _onInit(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _setTopWindow(const v8::Arguments& args);
+    static v8::Handle<v8::Value> _loop(const v8::Arguments& args);
+    static v8::Handle<v8::Value> _init(const v8::Arguments& args);
+    static v8::Handle<v8::Value> _run(const v8::Arguments& args);
+    static v8::Handle<v8::Value> _onInit(const v8::Arguments& args);
+    static v8::Handle<v8::Value> _setTopWindow(const v8::Arguments& args);
 
-  static v8::Persistent<v8::FunctionTemplate> s_ct;
+    static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 
 #endif

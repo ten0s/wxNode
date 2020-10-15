@@ -10,7 +10,6 @@ class wxNode_wxWindow;
 class wxNode_wxPoint;
 class wxNode_wxTextValidator;
 
-
 class wxNode_wxTextEntryDialog : public wxTextEntryDialog, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -22,32 +21,23 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxTextEntryDialog* obj);
   static v8::Handle<v8::Value> NewCopy(const wxTextEntryDialog& obj);
 
-  
-  
   wxNode_wxTextEntryDialog(wxWindow* parent, const wxString& message, const wxString& caption, const wxString& value, long int style, wxPoint& pos);
-  
   wxNode_wxTextEntryDialog(wxWindow* parent, const wxString& message, const wxString& caption, const wxString& value, long int style);
-  
   wxNode_wxTextEntryDialog(wxWindow* parent, const wxString& message, const wxString& caption, const wxString& value);
-  
   wxNode_wxTextEntryDialog(wxWindow* parent, const wxString& message, const wxString& caption);
-  
   wxNode_wxTextEntryDialog(wxWindow* parent, const wxString& message);
-  
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _SetValue(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetValue(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _SetTextValidator(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetTextValidator(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _OnOK(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetClassInfo(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetValue(const v8::Arguments& args);
+static v8::Handle<v8::Value> _SetTextValidator(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetTextValidator(const v8::Arguments& args);
+static v8::Handle<v8::Value> _OnOK(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetClassInfo(const v8::Arguments& args);
+static v8::Handle<v8::Value> _wxCreateObject(const v8::Arguments& args);
   
-  
-
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 

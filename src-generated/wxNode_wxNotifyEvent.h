@@ -8,7 +8,6 @@ class wxNode_wxEvtHandler;
 class wxNode_wxCommandEvent;
 class wxNode_wxNotifyEvent;
 
-
 class wxNode_wxNotifyEvent : public wxNotifyEvent, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -20,30 +19,21 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxNotifyEvent* obj);
   static v8::Handle<v8::Value> NewCopy(const wxNotifyEvent& obj);
 
-  
-  
   wxNode_wxNotifyEvent(int commandType, int winid);
-  
   wxNode_wxNotifyEvent(int commandType);
-  
   wxNode_wxNotifyEvent();
-  
   wxNode_wxNotifyEvent(wxNotifyEvent& event);
-  
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _Veto(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _Allow(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _IsAllowed(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _Clone(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetClassInfo(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _wxCreateObject(const v8::Arguments& args);
+static v8::Handle<v8::Value> _Allow(const v8::Arguments& args);
+static v8::Handle<v8::Value> _IsAllowed(const v8::Arguments& args);
+static v8::Handle<v8::Value> _Clone(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetClassInfo(const v8::Arguments& args);
+static v8::Handle<v8::Value> _wxCreateObject(const v8::Arguments& args);
   
-  
-
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 

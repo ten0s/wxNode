@@ -7,84 +7,72 @@
 #include "wxNode_wxClassInfo.h"
 #include "wxNode_wxObject.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxIcon::s_ct;
 
-
-
 /*
- * id: _16782
+ * id: _15369
  */
 wxNode_wxIcon::wxNode_wxIcon(wxIcon& arg0)
   : wxIcon(arg0)
 {
 
 }
-
 /*
- * id: _16783
+ * id: _15370
  */
 wxNode_wxIcon::wxNode_wxIcon()
   : wxIcon()
 {
 
 }
-
 /*
- * id: _16784
+ * id: _15371
  */
 wxNode_wxIcon::wxNode_wxIcon(const char** bits)
   : wxIcon(bits)
 {
 
 }
-
 /*
- * id: _16785
+ * id: _15372
  */
 wxNode_wxIcon::wxNode_wxIcon(const wxString& filename, wxBitmapType type, int arg2, int arg3)
   : wxIcon(filename, type, arg2, arg3)
 {
 
 }
-
 /*
- * id: _16785
+ * id: _15372
  */
 wxNode_wxIcon::wxNode_wxIcon(const wxString& filename, wxBitmapType type, int arg2)
   : wxIcon(filename, type, arg2)
 {
 
 }
-
 /*
- * id: _16785
+ * id: _15372
  */
 wxNode_wxIcon::wxNode_wxIcon(const wxString& filename, wxBitmapType type)
   : wxIcon(filename, type)
 {
 
 }
-
 /*
- * id: _16785
+ * id: _15372
  */
 wxNode_wxIcon::wxNode_wxIcon(const wxString& filename)
   : wxIcon(filename)
 {
 
 }
-
 /*
- * id: _16786
+ * id: _15373
  */
 wxNode_wxIcon::wxNode_wxIcon(wxIconLocation& loc)
   : wxIcon(loc)
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxIcon::Init(v8::Handle<v8::Object> target) {
@@ -104,12 +92,10 @@ wxNode_wxIcon::wxNode_wxIcon(wxIconLocation& loc)
 /*static*/ void wxNode_wxIcon::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxBitmap::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "loadFile", _LoadFile);
-  NODE_SET_PROTOTYPE_METHOD(target, "copyFromBitmap", _CopyFromBitmap);
-  NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
-  NODE_SET_METHOD(target, "wxCreateObject", _wxCreateObject);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "copyFromBitmap", _CopyFromBitmap);
+NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
+NODE_SET_METHOD(target, "wxCreateObject", _wxCreateObject);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxIcon::New(const wxNode_wxIcon* obj) {
   v8::HandleScope scope;
@@ -178,118 +164,99 @@ wxNode_wxIcon::wxNode_wxIcon(wxIconLocation& loc)
 /*static*/ v8::Handle<v8::Value> wxNode_wxIcon::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _16782
+   * id: _15369
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxIcon::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxIcon* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxIcon>(args[0]->ToObject()); /* type: _15643  */
-    
+    wxNode_wxIcon* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxIcon>(args[0]->ToObject()); /* type: _14241  */
 
     wxNode_wxIcon *self = new wxNode_wxIcon(*arg0);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16783
+   * id: _15370
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxIcon *self = new wxNode_wxIcon();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16784
+   * id: _15371
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue bits(args[0]->ToString()); /* type: _59399 ** */
-    
+    v8::String::AsciiValue bits(args[0]->ToString()); /* type: _57236 ** */
 
     wxNode_wxIcon *self = new wxNode_wxIcon(*bits);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16785
+   * id: _15372
    */
   if(args.Length() == 4 && args[0]->IsString() && args[1]->IsNumber() && args[2]->IsNumber() && args[3]->IsNumber()) {
-    v8::String::AsciiValue filename(args[0]->ToString()); /* type: _14975  */
-    wxBitmapType type = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2567  */
-    int arg2 = (int)args[2]->ToInt32()->Value(); /* type: _165  */
-    int arg3 = (int)args[3]->ToInt32()->Value(); /* type: _165  */
-    
+    v8::String::AsciiValue filename(args[0]->ToString()); /* type: _13556  */
+wxBitmapType type = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2379  */
+int arg2 = (int)args[2]->ToInt32()->Value(); /* type: _142  */
+int arg3 = (int)args[3]->ToInt32()->Value(); /* type: _142  */
 
     wxNode_wxIcon *self = new wxNode_wxIcon(*filename, type, arg2, arg3);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16785
+   * id: _15372
    */
   if(args.Length() == 3 && args[0]->IsString() && args[1]->IsNumber() && args[2]->IsNumber()) {
-    v8::String::AsciiValue filename(args[0]->ToString()); /* type: _14975  */
-    wxBitmapType type = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2567  */
-    int arg2 = (int)args[2]->ToInt32()->Value(); /* type: _165  */
-    
+    v8::String::AsciiValue filename(args[0]->ToString()); /* type: _13556  */
+wxBitmapType type = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2379  */
+int arg2 = (int)args[2]->ToInt32()->Value(); /* type: _142  */
 
     wxNode_wxIcon *self = new wxNode_wxIcon(*filename, type, arg2);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16785
+   * id: _15372
    */
   if(args.Length() == 2 && args[0]->IsString() && args[1]->IsNumber()) {
-    v8::String::AsciiValue filename(args[0]->ToString()); /* type: _14975  */
-    wxBitmapType type = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2567  */
-    
+    v8::String::AsciiValue filename(args[0]->ToString()); /* type: _13556  */
+wxBitmapType type = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2379  */
 
     wxNode_wxIcon *self = new wxNode_wxIcon(*filename, type);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16785
+   * id: _15372
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue filename(args[0]->ToString()); /* type: _14975  */
-    
+    v8::String::AsciiValue filename(args[0]->ToString()); /* type: _13556  */
 
     wxNode_wxIcon *self = new wxNode_wxIcon(*filename);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16786
+   * id: _15373
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxIconLocation::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxIconLocation* loc = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxIconLocation>(args[0]->ToObject()); /* type: _59400  */
-    
+    wxNode_wxIconLocation* loc = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxIconLocation>(args[0]->ToObject()); /* type: _57237  */
 
     wxNode_wxIcon *self = new wxNode_wxIcon(*loc);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxIcon).\n";
@@ -301,52 +268,44 @@ wxNode_wxIcon::wxNode_wxIcon(wxIconLocation& loc)
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxIcon::_LoadFile(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxIcon* self = unwrap<wxNode_wxIcon>(args.This());
 
-  
   /*
-   * id: _16787
+   * id: _15374
    */
   if(args.Length() == 4 && args[0]->IsString() && args[1]->IsNumber() && args[2]->IsNumber() && args[3]->IsNumber()) {
-    v8::String::AsciiValue name(args[0]->ToString()); /* type: _14975  */
-    wxBitmapType flags = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2567  */
-    int arg2 = (int)args[2]->ToInt32()->Value(); /* type: _165  */
-    int arg3 = (int)args[3]->ToInt32()->Value(); /* type: _165  */
-    
+    v8::String::AsciiValue name(args[0]->ToString()); /* type: _13556  */
+wxBitmapType flags = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2379  */
+int arg2 = (int)args[2]->ToInt32()->Value(); /* type: _142  */
+int arg3 = (int)args[3]->ToInt32()->Value(); /* type: _142  */
 
     bool returnVal = self->LoadFile(*name, flags, arg2, arg3);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _16788
+   * id: _15375
    */
   if(args.Length() == 2 && args[0]->IsString() && args[1]->IsNumber()) {
-    v8::String::AsciiValue name(args[0]->ToString()); /* type: _14975  */
-    wxBitmapType flags = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2567  */
-    
+    v8::String::AsciiValue name(args[0]->ToString()); /* type: _13556  */
+wxBitmapType flags = static_cast<wxBitmapType>(args[1]->ToInt32()->Value()); /* type: _2379  */
 
     bool returnVal = self->LoadFile(*name, flags);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _16788
+   * id: _15375
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue name(args[0]->ToString()); /* type: _14975  */
-    
+    v8::String::AsciiValue name(args[0]->ToString()); /* type: _13556  */
 
     bool returnVal = self->LoadFile(*name);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxIcon::LoadFile).\n";
@@ -357,24 +316,20 @@ wxNode_wxIcon::wxNode_wxIcon(wxIconLocation& loc)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxIcon::_CopyFromBitmap(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxIcon* self = unwrap<wxNode_wxIcon>(args.This());
 
-  
   /*
-   * id: _16789
+   * id: _15376
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bmp = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bmp = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->CopyFromBitmap(*bmp);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxIcon::CopyFromBitmap).\n";
@@ -385,23 +340,19 @@ wxNode_wxIcon::wxNode_wxIcon(wxIconLocation& loc)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxIcon::_GetClassInfo(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxIcon* self = unwrap<wxNode_wxIcon>(args.This());
 
-  
   /*
-   * id: _16790
+   * id: _15377
    */
   if(args.Length() == 0) {
     
-
     wxClassInfo* returnVal = self->GetClassInfo();
 
     return scope.Close(wxNode_wxClassInfo::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxIcon::GetClassInfo).\n";
@@ -412,23 +363,19 @@ wxNode_wxIcon::wxNode_wxIcon(wxIconLocation& loc)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxIcon::_wxCreateObject(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxIcon* self = unwrap<wxNode_wxIcon>(args.This());
 
-  
   /*
-   * id: _16791
+   * id: _15378
    */
   if(args.Length() == 0) {
     
-
     wxObject* returnVal = wxIcon::wxCreateObject();
 
     return scope.Close(wxNode_wxObject::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxIcon::wxCreateObject).\n";
@@ -439,6 +386,4 @@ wxNode_wxIcon::wxNode_wxIcon(wxIconLocation& loc)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

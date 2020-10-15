@@ -4,9 +4,7 @@
 #include "wxNode_wxEvtHandler.h"
 #include "wxNode_wxWindowWithItems.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxControlWithItems::s_ct;
-
 
 
 
@@ -27,9 +25,7 @@
 /*static*/ void wxNode_wxControlWithItems::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxWindowWithItems_wxControl_wxItemContainer::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "shouldInheritColours", _ShouldInheritColours);
-  
-  
-}
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxControlWithItems::New(const wxNode_wxControlWithItems* obj) {
   v8::HandleScope scope;
@@ -113,7 +109,6 @@
 /*static*/ v8::Handle<v8::Value> wxNode_wxControlWithItems::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxControlWithItems).\n";
@@ -125,23 +120,19 @@
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxControlWithItems::_ShouldInheritColours(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxControlWithItems* self = unwrap<wxNode_wxControlWithItems>(args.This());
 
-  
   /*
-   * id: _50806
+   * id: _48688
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->ShouldInheritColours();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxControlWithItems::ShouldInheritColours).\n";
@@ -152,6 +143,4 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

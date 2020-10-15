@@ -3,9 +3,7 @@
 #include "wxNode_wxItemContainerImmutable.h"
 #include "wxNode_wxArrayString.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxItemContainerImmutable::s_ct;
-
 
 
 
@@ -26,19 +24,17 @@
 /*static*/ void wxNode_wxItemContainerImmutable::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxEvtHandler::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "getCount", _GetCount);
-  NODE_SET_PROTOTYPE_METHOD(target, "isEmpty", _IsEmpty);
-  NODE_SET_PROTOTYPE_METHOD(target, "getString", _GetString);
-  NODE_SET_PROTOTYPE_METHOD(target, "getStrings", _GetStrings);
-  NODE_SET_PROTOTYPE_METHOD(target, "setString", _SetString);
-  NODE_SET_PROTOTYPE_METHOD(target, "findString", _FindString);
-  NODE_SET_PROTOTYPE_METHOD(target, "setSelection", _SetSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "getSelection", _GetSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "setStringSelection", _SetStringSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "getStringSelection", _GetStringSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "select", _Select);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "isEmpty", _IsEmpty);
+NODE_SET_PROTOTYPE_METHOD(target, "getString", _GetString);
+NODE_SET_PROTOTYPE_METHOD(target, "getStrings", _GetStrings);
+NODE_SET_PROTOTYPE_METHOD(target, "setString", _SetString);
+NODE_SET_PROTOTYPE_METHOD(target, "findString", _FindString);
+NODE_SET_PROTOTYPE_METHOD(target, "setSelection", _SetSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "getSelection", _GetSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "setStringSelection", _SetStringSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "getStringSelection", _GetStringSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "select", _Select);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::New(const wxNode_wxItemContainerImmutable* obj) {
   v8::HandleScope scope;
@@ -138,7 +134,6 @@
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxItemContainerImmutable).\n";
@@ -150,23 +145,19 @@
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_GetCount(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52541
+   * id: _50533
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetCount();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::GetCount).\n";
@@ -177,23 +168,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_IsEmpty(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52542
+   * id: _50534
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->IsEmpty();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::IsEmpty).\n";
@@ -204,24 +191,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_GetString(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52543
+   * id: _50535
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _44  */
-    
+    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _1129  */
 
     wxString returnVal = self->GetString(n);
 
     return scope.Close(v8::String::New(returnVal.mb_str()));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::GetString).\n";
@@ -232,23 +215,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_GetStrings(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52544
+   * id: _50536
    */
   if(args.Length() == 0) {
     
-
     wxArrayString returnVal = self->GetStrings();
 
     return scope.Close(wxNode_wxArrayString::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::GetStrings).\n";
@@ -259,25 +238,21 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_SetString(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52545
+   * id: _50537
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsString()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _44  */
-    v8::String::AsciiValue s(args[1]->ToString()); /* type: _14975  */
-    
+    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _1129  */
+v8::String::AsciiValue s(args[1]->ToString()); /* type: _13556  */
 
     self->SetString(n, *s);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::SetString).\n";
@@ -288,37 +263,31 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_FindString(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52546
+   * id: _50538
    */
   if(args.Length() == 2 && args[0]->IsString() && args[1]->IsBoolean()) {
-    v8::String::AsciiValue s(args[0]->ToString()); /* type: _14975  */
-    bool bCase = args[1]->ToBoolean()->Value(); /* type: _14830  */
-    
+    v8::String::AsciiValue s(args[0]->ToString()); /* type: _13556  */
+bool bCase = args[1]->ToBoolean()->Value(); /* type: _13422  */
 
     int returnVal = self->FindString(*s, bCase);
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
   /*
-   * id: _52546
+   * id: _50538
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue s(args[0]->ToString()); /* type: _14975  */
-    
+    v8::String::AsciiValue s(args[0]->ToString()); /* type: _13556  */
 
     int returnVal = self->FindString(*s);
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::FindString).\n";
@@ -329,24 +298,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_SetSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52547
+   * id: _50539
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int n = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int n = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     self->SetSelection(n);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::SetSelection).\n";
@@ -357,23 +322,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_GetSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52548
+   * id: _50540
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetSelection();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::GetSelection).\n";
@@ -384,24 +345,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_SetStringSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52549
+   * id: _50541
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue s(args[0]->ToString()); /* type: _14975  */
-    
+    v8::String::AsciiValue s(args[0]->ToString()); /* type: _13556  */
 
     bool returnVal = self->SetStringSelection(*s);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::SetStringSelection).\n";
@@ -412,23 +369,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_GetStringSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52550
+   * id: _50542
    */
   if(args.Length() == 0) {
     
-
     wxString returnVal = self->GetStringSelection();
 
     return scope.Close(v8::String::New(returnVal.mb_str()));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::GetStringSelection).\n";
@@ -439,24 +392,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxItemContainerImmutable::_Select(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxItemContainerImmutable* self = unwrap<wxNode_wxItemContainerImmutable>(args.This());
 
-  
   /*
-   * id: _52551
+   * id: _50543
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int n = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int n = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     self->Select(n);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxItemContainerImmutable::Select).\n";
@@ -467,6 +416,4 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

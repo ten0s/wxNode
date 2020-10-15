@@ -3,39 +3,32 @@
 #include "wxNode_wxSize.h"
 #include "wxNode_wxPoint.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxSize::s_ct;
 
-
-
 /*
- * id: _37347
+ * id: _35366
  */
 wxNode_wxSize::wxNode_wxSize(wxSize& arg0)
   : wxSize(arg0)
 {
 
 }
-
 /*
- * id: _37348
+ * id: _35367
  */
 wxNode_wxSize::wxNode_wxSize()
   : wxSize()
 {
 
 }
-
 /*
- * id: _37349
+ * id: _35368
  */
 wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   : wxSize(xx, yy)
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxSize::Init(v8::Handle<v8::Object> target) {
@@ -55,23 +48,21 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
 /*static*/ void wxNode_wxSize::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxEvtHandler::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "incTo", _IncTo);
-  NODE_SET_PROTOTYPE_METHOD(target, "decTo", _DecTo);
-  NODE_SET_PROTOTYPE_METHOD(target, "incBy", _IncBy);
-  NODE_SET_PROTOTYPE_METHOD(target, "decBy", _DecBy);
-  NODE_SET_PROTOTYPE_METHOD(target, "scale", _Scale);
-  NODE_SET_PROTOTYPE_METHOD(target, "set", _Set);
-  NODE_SET_PROTOTYPE_METHOD(target, "setWidth", _SetWidth);
-  NODE_SET_PROTOTYPE_METHOD(target, "setHeight", _SetHeight);
-  NODE_SET_PROTOTYPE_METHOD(target, "getWidth", _GetWidth);
-  NODE_SET_PROTOTYPE_METHOD(target, "getHeight", _GetHeight);
-  NODE_SET_PROTOTYPE_METHOD(target, "isFullySpecified", _IsFullySpecified);
-  NODE_SET_PROTOTYPE_METHOD(target, "setDefaults", _SetDefaults);
-  NODE_SET_PROTOTYPE_METHOD(target, "getX", _GetX);
-  NODE_SET_PROTOTYPE_METHOD(target, "getY", _GetY);
-  
+NODE_SET_PROTOTYPE_METHOD(target, "decTo", _DecTo);
+NODE_SET_PROTOTYPE_METHOD(target, "incBy", _IncBy);
+NODE_SET_PROTOTYPE_METHOD(target, "decBy", _DecBy);
+NODE_SET_PROTOTYPE_METHOD(target, "scale", _Scale);
+NODE_SET_PROTOTYPE_METHOD(target, "set", _Set);
+NODE_SET_PROTOTYPE_METHOD(target, "setWidth", _SetWidth);
+NODE_SET_PROTOTYPE_METHOD(target, "setHeight", _SetHeight);
+NODE_SET_PROTOTYPE_METHOD(target, "getWidth", _GetWidth);
+NODE_SET_PROTOTYPE_METHOD(target, "getHeight", _GetHeight);
+NODE_SET_PROTOTYPE_METHOD(target, "isFullySpecified", _IsFullySpecified);
+NODE_SET_PROTOTYPE_METHOD(target, "setDefaults", _SetDefaults);
+NODE_SET_PROTOTYPE_METHOD(target, "getX", _GetX);
+NODE_SET_PROTOTYPE_METHOD(target, "getY", _GetY);
   target->PrototypeTemplate()->SetAccessor(v8::String::New("x"), _xGet, _xSet);
-  target->PrototypeTemplate()->SetAccessor(v8::String::New("y"), _yGet, _ySet);
-  
+target->PrototypeTemplate()->SetAccessor(v8::String::New("y"), _yGet, _ySet);
 }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::New(const wxNode_wxSize* obj) {
@@ -141,48 +132,39 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _37347
+   * id: _35366
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     wxNode_wxSize *self = new wxNode_wxSize(*arg0);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _37348
+   * id: _35367
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxSize *self = new wxNode_wxSize();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _37349
+   * id: _35368
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int xx = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    int yy = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    int xx = (int)args[0]->ToInt32()->Value(); /* type: _142  */
+int yy = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     wxNode_wxSize *self = new wxNode_wxSize(xx, yy);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxSize).\n";
@@ -194,24 +176,20 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_IncTo(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37362
+   * id: _35381
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->IncTo(*sz);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::IncTo).\n";
@@ -222,24 +200,20 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_DecTo(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37363
+   * id: _35382
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->DecTo(*sz);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::DecTo).\n";
@@ -250,61 +224,51 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_IncBy(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37364
+   * id: _35383
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int dx = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    int dy = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    int dx = (int)args[0]->ToInt32()->Value(); /* type: _142  */
+int dy = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     self->IncBy(dx, dy);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37365
+   * id: _35384
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxPoint::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxPoint* pt = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _20518  */
-    
+    wxNode_wxPoint* pt = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _18992  */
 
     self->IncBy(*pt);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37366
+   * id: _35385
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->IncBy(*sz);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37367
+   * id: _35386
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int d = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int d = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     self->IncBy(d);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::IncBy).\n";
@@ -315,61 +279,51 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_DecBy(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37368
+   * id: _35387
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int dx = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    int dy = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    int dx = (int)args[0]->ToInt32()->Value(); /* type: _142  */
+int dy = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     self->DecBy(dx, dy);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37369
+   * id: _35388
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxPoint::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxPoint* pt = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _20518  */
-    
+    wxNode_wxPoint* pt = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _18992  */
 
     self->DecBy(*pt);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37370
+   * id: _35389
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->DecBy(*sz);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37371
+   * id: _35390
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int d = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int d = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     self->DecBy(d);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::DecBy).\n";
@@ -380,25 +334,21 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_Scale(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37372
+   * id: _35391
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    float xscale = (float)args[0]->ToNumber()->Value(); /* type: _13411  */
-    float yscale = (float)args[1]->ToNumber()->Value(); /* type: _13411  */
-    
+    float xscale = (float)args[0]->ToNumber()->Value(); /* type: _2254  */
+float yscale = (float)args[1]->ToNumber()->Value(); /* type: _2254  */
 
     wxSize returnVal = self->Scale(xscale, yscale);
 
     return scope.Close(wxNode_wxSize::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::Scale).\n";
@@ -409,25 +359,21 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_Set(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37373
+   * id: _35392
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int xx = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    int yy = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    int xx = (int)args[0]->ToInt32()->Value(); /* type: _142  */
+int yy = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     self->Set(xx, yy);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::Set).\n";
@@ -438,24 +384,20 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_SetWidth(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37374
+   * id: _35393
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int w = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int w = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     self->SetWidth(w);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::SetWidth).\n";
@@ -466,24 +408,20 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_SetHeight(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37375
+   * id: _35394
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int h = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int h = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     self->SetHeight(h);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::SetHeight).\n";
@@ -494,23 +432,19 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_GetWidth(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37376
+   * id: _35395
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetWidth();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::GetWidth).\n";
@@ -521,23 +455,19 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_GetHeight(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37377
+   * id: _35396
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetHeight();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::GetHeight).\n";
@@ -548,23 +478,19 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_IsFullySpecified(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37378
+   * id: _35397
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->IsFullySpecified();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::IsFullySpecified).\n";
@@ -575,24 +501,20 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_SetDefaults(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37379
+   * id: _35398
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* size = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* size = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->SetDefaults(*size);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::SetDefaults).\n";
@@ -603,23 +525,19 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_GetX(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37380
+   * id: _35399
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetX();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::GetX).\n";
@@ -630,23 +548,19 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_GetY(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(args.This());
 
-  
   /*
-   * id: _37381
+   * id: _35400
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetY();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSize::GetY).\n";
@@ -657,8 +571,6 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_xGet(v8::Local<v8::String> name, const v8::AccessorInfo& info) {
   v8::HandleScope scope;
@@ -673,7 +585,6 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
 
   self->x = val->ToNumber()->Value();
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSize::_yGet(v8::Local<v8::String> name, const v8::AccessorInfo& info) {
   v8::HandleScope scope;
   wxNode_wxSize* self = unwrap<wxNode_wxSize>(info.This());
@@ -687,4 +598,3 @@ wxNode_wxSize::wxNode_wxSize(int xx, int yy)
 
   self->y = val->ToNumber()->Value();
 }
-

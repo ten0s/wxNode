@@ -10,7 +10,6 @@ class wxNode_wxWindow;
 class wxNode_wxPoint;
 class wxNode_wxSize;
 
-
 class wxNode_wxStaticText : public wxStaticText, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -22,32 +21,21 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxStaticText* obj);
   static v8::Handle<v8::Value> NewCopy(const wxStaticText& obj);
 
-  
-  
   wxNode_wxStaticText();
-  
   wxNode_wxStaticText(wxWindow* parent, int id, const wxString& label, wxPoint& pos, wxSize& size, long int style, const wxString& name);
-  
   wxNode_wxStaticText(wxWindow* parent, int id, const wxString& label, wxPoint& pos, wxSize& size, long int style);
-  
   wxNode_wxStaticText(wxWindow* parent, int id, const wxString& label, wxPoint& pos, wxSize& size);
-  
   wxNode_wxStaticText(wxWindow* parent, int id, const wxString& label, wxPoint& pos);
-  
   wxNode_wxStaticText(wxWindow* parent, int id, const wxString& label);
-  
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _Wrap(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _AcceptsFocus(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _HasTransparentBackground(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _IsEllipsized(const v8::Arguments& args);
+static v8::Handle<v8::Value> _AcceptsFocus(const v8::Arguments& args);
+static v8::Handle<v8::Value> _HasTransparentBackground(const v8::Arguments& args);
+static v8::Handle<v8::Value> _IsEllipsized(const v8::Arguments& args);
   
-  
-
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 

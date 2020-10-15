@@ -9,30 +9,24 @@
 #include "wxNode_wxIconBundle.h"
 #include "wxNode_wxClassInfo.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxArtProvider::s_ct;
 
-
-
 /*
- * id: _35328
+ * id: _33535
  */
 wxNode_wxArtProvider::wxNode_wxArtProvider(wxArtProvider& arg0)
   : wxArtProvider(arg0)
 {
 
 }
-
 /*
- * id: _35329
+ * id: _33536
  */
 wxNode_wxArtProvider::wxNode_wxArtProvider()
   : wxArtProvider()
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxArtProvider::Init(v8::Handle<v8::Object> target) {
@@ -52,22 +46,20 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
 /*static*/ void wxNode_wxArtProvider::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxObject::AddMethods(target);
   NODE_SET_METHOD(target, "hasNativeProvider", _HasNativeProvider);
-  NODE_SET_METHOD(target, "push", _Push);
-  NODE_SET_METHOD(target, "pushBack", _PushBack);
-  NODE_SET_METHOD(target, "pop", _Pop);
-  NODE_SET_METHOD(target, "remove", _Remove);
-  NODE_SET_METHOD(target, "delete", _Delete);
-  NODE_SET_METHOD(target, "getBitmap", _GetBitmap);
-  NODE_SET_METHOD(target, "getIcon", _GetIcon);
-  NODE_SET_METHOD(target, "getMessageBoxIconId", _GetMessageBoxIconId);
-  NODE_SET_METHOD(target, "getMessageBoxIcon", _GetMessageBoxIcon);
-  NODE_SET_METHOD(target, "getIconBundle", _GetIconBundle);
-  NODE_SET_METHOD(target, "getNativeSizeHint", _GetNativeSizeHint);
-  NODE_SET_METHOD(target, "getSizeHint", _GetSizeHint);
-  NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
-  
-  
-}
+NODE_SET_METHOD(target, "push", _Push);
+NODE_SET_METHOD(target, "pushBack", _PushBack);
+NODE_SET_METHOD(target, "pop", _Pop);
+NODE_SET_METHOD(target, "remove", _Remove);
+NODE_SET_METHOD(target, "delete", _Delete);
+NODE_SET_METHOD(target, "getBitmap", _GetBitmap);
+NODE_SET_METHOD(target, "getIcon", _GetIcon);
+NODE_SET_METHOD(target, "getMessageBoxIconId", _GetMessageBoxIconId);
+NODE_SET_METHOD(target, "getMessageBoxIcon", _GetMessageBoxIcon);
+NODE_SET_METHOD(target, "getIconBundle", _GetIconBundle);
+NODE_SET_METHOD(target, "getNativeSizeHint", _GetNativeSizeHint);
+NODE_SET_METHOD(target, "getSizeHint", _GetSizeHint);
+NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::New(const wxNode_wxArtProvider* obj) {
   v8::HandleScope scope;
@@ -136,34 +128,27 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _35328
+   * id: _33535
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxArtProvider::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxArtProvider* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _64567  */
-    
+    wxNode_wxArtProvider* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _62188  */
 
     wxNode_wxArtProvider *self = new wxNode_wxArtProvider(*arg0);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _35329
+   * id: _33536
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxArtProvider *self = new wxNode_wxArtProvider();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxArtProvider).\n";
@@ -175,23 +160,19 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_HasNativeProvider(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35331
+   * id: _33538
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = wxArtProvider::HasNativeProvider();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::HasNativeProvider).\n";
@@ -202,24 +183,20 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_Push(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35332
+   * id: _33539
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxArtProvider::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxArtProvider* provider = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _64568 * */
-    
+    wxNode_wxArtProvider* provider = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _62189 * */
 
     wxArtProvider::Push(provider);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::Push).\n";
@@ -230,24 +207,20 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_PushBack(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35333
+   * id: _33540
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxArtProvider::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxArtProvider* provider = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _64568 * */
-    
+    wxNode_wxArtProvider* provider = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _62189 * */
 
     wxArtProvider::PushBack(provider);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::PushBack).\n";
@@ -258,23 +231,19 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_Pop(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35335
+   * id: _33542
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = wxArtProvider::Pop();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::Pop).\n";
@@ -285,24 +254,20 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_Remove(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35336
+   * id: _33543
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxArtProvider::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxArtProvider* provider = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _64568 * */
-    
+    wxNode_wxArtProvider* provider = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _62189 * */
 
     bool returnVal = wxArtProvider::Remove(provider);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::Remove).\n";
@@ -313,24 +278,20 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_Delete(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35337
+   * id: _33544
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxArtProvider::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxArtProvider* provider = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _64568 * */
-    
+    wxNode_wxArtProvider* provider = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArtProvider>(args[0]->ToObject()); /* type: _62189 * */
 
     bool returnVal = wxArtProvider::Delete(provider);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::Delete).\n";
@@ -341,51 +302,43 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_GetBitmap(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35338
+   * id: _33545
    */
   if(args.Length() == 3 && args[0]->IsString() && args[1]->IsString() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxSize::AssignableFrom(args[2]->ToObject()->GetConstructorName())))) {
-    v8::String::AsciiValue id(args[0]->ToString()); /* type: _64569  */
-    v8::String::AsciiValue client(args[1]->ToString()); /* type: _64570  */
-    wxNode_wxSize* size = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[2]->ToObject()); /* type: _20628  */
-    
+    v8::String::AsciiValue id(args[0]->ToString()); /* type: _62190  */
+v8::String::AsciiValue client(args[1]->ToString()); /* type: _60564  */
+wxNode_wxSize* size = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[2]->ToObject()); /* type: _19093  */
 
     wxBitmap returnVal = wxArtProvider::GetBitmap(*id, *client, *size);
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
   /*
-   * id: _35338
+   * id: _33545
    */
   if(args.Length() == 2 && args[0]->IsString() && args[1]->IsString()) {
-    v8::String::AsciiValue id(args[0]->ToString()); /* type: _64569  */
-    v8::String::AsciiValue client(args[1]->ToString()); /* type: _64570  */
-    
+    v8::String::AsciiValue id(args[0]->ToString()); /* type: _62190  */
+v8::String::AsciiValue client(args[1]->ToString()); /* type: _60564  */
 
     wxBitmap returnVal = wxArtProvider::GetBitmap(*id, *client);
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
   /*
-   * id: _35338
+   * id: _33545
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue id(args[0]->ToString()); /* type: _64569  */
-    
+    v8::String::AsciiValue id(args[0]->ToString()); /* type: _62190  */
 
     wxBitmap returnVal = wxArtProvider::GetBitmap(*id);
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::GetBitmap).\n";
@@ -396,51 +349,43 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_GetIcon(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35339
+   * id: _33546
    */
   if(args.Length() == 3 && args[0]->IsString() && args[1]->IsString() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxSize::AssignableFrom(args[2]->ToObject()->GetConstructorName())))) {
-    v8::String::AsciiValue id(args[0]->ToString()); /* type: _64569  */
-    v8::String::AsciiValue client(args[1]->ToString()); /* type: _64570  */
-    wxNode_wxSize* size = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[2]->ToObject()); /* type: _20628  */
-    
+    v8::String::AsciiValue id(args[0]->ToString()); /* type: _62190  */
+v8::String::AsciiValue client(args[1]->ToString()); /* type: _60564  */
+wxNode_wxSize* size = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[2]->ToObject()); /* type: _19093  */
 
     wxIcon returnVal = wxArtProvider::GetIcon(*id, *client, *size);
 
     return scope.Close(wxNode_wxIcon::NewCopy(returnVal));
   }
-  
   /*
-   * id: _35339
+   * id: _33546
    */
   if(args.Length() == 2 && args[0]->IsString() && args[1]->IsString()) {
-    v8::String::AsciiValue id(args[0]->ToString()); /* type: _64569  */
-    v8::String::AsciiValue client(args[1]->ToString()); /* type: _64570  */
-    
+    v8::String::AsciiValue id(args[0]->ToString()); /* type: _62190  */
+v8::String::AsciiValue client(args[1]->ToString()); /* type: _60564  */
 
     wxIcon returnVal = wxArtProvider::GetIcon(*id, *client);
 
     return scope.Close(wxNode_wxIcon::NewCopy(returnVal));
   }
-  
   /*
-   * id: _35339
+   * id: _33546
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue id(args[0]->ToString()); /* type: _64569  */
-    
+    v8::String::AsciiValue id(args[0]->ToString()); /* type: _62190  */
 
     wxIcon returnVal = wxArtProvider::GetIcon(*id);
 
     return scope.Close(wxNode_wxIcon::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::GetIcon).\n";
@@ -451,24 +396,20 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_GetMessageBoxIconId(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35340
+   * id: _33547
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int flags = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int flags = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     wxString returnVal = wxArtProvider::GetMessageBoxIconId(flags);
 
     return scope.Close(v8::String::New(returnVal.mb_str()));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::GetMessageBoxIconId).\n";
@@ -479,24 +420,20 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_GetMessageBoxIcon(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35341
+   * id: _33548
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int flags = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int flags = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     wxIcon returnVal = wxArtProvider::GetMessageBoxIcon(flags);
 
     return scope.Close(wxNode_wxIcon::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::GetMessageBoxIcon).\n";
@@ -507,37 +444,31 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_GetIconBundle(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35342
+   * id: _33549
    */
   if(args.Length() == 2 && args[0]->IsString() && args[1]->IsString()) {
-    v8::String::AsciiValue id(args[0]->ToString()); /* type: _64569  */
-    v8::String::AsciiValue client(args[1]->ToString()); /* type: _64570  */
-    
+    v8::String::AsciiValue id(args[0]->ToString()); /* type: _62190  */
+v8::String::AsciiValue client(args[1]->ToString()); /* type: _60564  */
 
     wxIconBundle returnVal = wxArtProvider::GetIconBundle(*id, *client);
 
     return scope.Close(wxNode_wxIconBundle::NewCopy(returnVal));
   }
-  
   /*
-   * id: _35342
+   * id: _33549
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue id(args[0]->ToString()); /* type: _64569  */
-    
+    v8::String::AsciiValue id(args[0]->ToString()); /* type: _62190  */
 
     wxIconBundle returnVal = wxArtProvider::GetIconBundle(*id);
 
     return scope.Close(wxNode_wxIconBundle::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::GetIconBundle).\n";
@@ -548,24 +479,20 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_GetNativeSizeHint(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35343
+   * id: _33550
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue client(args[0]->ToString()); /* type: _64570  */
-    
+    v8::String::AsciiValue client(args[0]->ToString()); /* type: _60564  */
 
     wxSize returnVal = wxArtProvider::GetNativeSizeHint(*client);
 
     return scope.Close(wxNode_wxSize::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::GetNativeSizeHint).\n";
@@ -576,37 +503,31 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_GetSizeHint(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35344
+   * id: _33551
    */
   if(args.Length() == 2 && args[0]->IsString() && args[1]->IsBoolean()) {
-    v8::String::AsciiValue client(args[0]->ToString()); /* type: _64570  */
-    bool platform_dependent = args[1]->ToBoolean()->Value(); /* type: _14830  */
-    
+    v8::String::AsciiValue client(args[0]->ToString()); /* type: _60564  */
+bool platform_dependent = args[1]->ToBoolean()->Value(); /* type: _13422  */
 
     wxSize returnVal = wxArtProvider::GetSizeHint(*client, platform_dependent);
 
     return scope.Close(wxNode_wxSize::NewCopy(returnVal));
   }
-  
   /*
-   * id: _35344
+   * id: _33551
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue client(args[0]->ToString()); /* type: _64570  */
-    
+    v8::String::AsciiValue client(args[0]->ToString()); /* type: _60564  */
 
     wxSize returnVal = wxArtProvider::GetSizeHint(*client);
 
     return scope.Close(wxNode_wxSize::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::GetSizeHint).\n";
@@ -617,23 +538,19 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxArtProvider::_GetClassInfo(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxArtProvider* self = unwrap<wxNode_wxArtProvider>(args.This());
 
-  
   /*
-   * id: _35353
+   * id: _33560
    */
   if(args.Length() == 0) {
     
-
     wxClassInfo* returnVal = self->GetClassInfo();
 
     return scope.Close(wxNode_wxClassInfo::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxArtProvider::GetClassInfo).\n";
@@ -644,6 +561,4 @@ wxNode_wxArtProvider::wxNode_wxArtProvider()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

@@ -9,9 +9,7 @@
 #include "wxNode_wxSizer.h"
 #include "wxNode_wxClassInfo.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxBookCtrlBase::s_ct;
-
 
 
 
@@ -32,41 +30,39 @@
 /*static*/ void wxNode_wxBookCtrlBase::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxControl::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "create", _Create);
-  NODE_SET_PROTOTYPE_METHOD(target, "getPageCount", _GetPageCount);
-  NODE_SET_PROTOTYPE_METHOD(target, "getPage", _GetPage);
-  NODE_SET_PROTOTYPE_METHOD(target, "getCurrentPage", _GetCurrentPage);
-  NODE_SET_PROTOTYPE_METHOD(target, "getSelection", _GetSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "setPageText", _SetPageText);
-  NODE_SET_PROTOTYPE_METHOD(target, "getPageText", _GetPageText);
-  NODE_SET_PROTOTYPE_METHOD(target, "getPageImage", _GetPageImage);
-  NODE_SET_PROTOTYPE_METHOD(target, "setPageImage", _SetPageImage);
-  NODE_SET_PROTOTYPE_METHOD(target, "setPageSize", _SetPageSize);
-  NODE_SET_PROTOTYPE_METHOD(target, "getControllerSize", _GetControllerSize);
-  NODE_SET_PROTOTYPE_METHOD(target, "calcSizeFromPage", _CalcSizeFromPage);
-  NODE_SET_PROTOTYPE_METHOD(target, "getInternalBorder", _GetInternalBorder);
-  NODE_SET_PROTOTYPE_METHOD(target, "setInternalBorder", _SetInternalBorder);
-  NODE_SET_PROTOTYPE_METHOD(target, "setControlMargin", _SetControlMargin);
-  NODE_SET_PROTOTYPE_METHOD(target, "getControlMargin", _GetControlMargin);
-  NODE_SET_PROTOTYPE_METHOD(target, "isVertical", _IsVertical);
-  NODE_SET_PROTOTYPE_METHOD(target, "setFitToCurrentPage", _SetFitToCurrentPage);
-  NODE_SET_PROTOTYPE_METHOD(target, "getFitToCurrentPage", _GetFitToCurrentPage);
-  NODE_SET_PROTOTYPE_METHOD(target, "getControlSizer", _GetControlSizer);
-  NODE_SET_PROTOTYPE_METHOD(target, "deletePage", _DeletePage);
-  NODE_SET_PROTOTYPE_METHOD(target, "removePage", _RemovePage);
-  NODE_SET_PROTOTYPE_METHOD(target, "deleteAllPages", _DeleteAllPages);
-  NODE_SET_PROTOTYPE_METHOD(target, "addPage", _AddPage);
-  NODE_SET_PROTOTYPE_METHOD(target, "insertPage", _InsertPage);
-  NODE_SET_PROTOTYPE_METHOD(target, "setSelection", _SetSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "changeSelection", _ChangeSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "advanceSelection", _AdvanceSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "hitTest", _HitTest);
-  NODE_SET_PROTOTYPE_METHOD(target, "hasMultiplePages", _HasMultiplePages);
-  NODE_SET_PROTOTYPE_METHOD(target, "acceptsFocus", _AcceptsFocus);
-  NODE_SET_PROTOTYPE_METHOD(target, "canApplyThemeBorder", _CanApplyThemeBorder);
-  NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "getPageCount", _GetPageCount);
+NODE_SET_PROTOTYPE_METHOD(target, "getPage", _GetPage);
+NODE_SET_PROTOTYPE_METHOD(target, "getCurrentPage", _GetCurrentPage);
+NODE_SET_PROTOTYPE_METHOD(target, "getSelection", _GetSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "setPageText", _SetPageText);
+NODE_SET_PROTOTYPE_METHOD(target, "getPageText", _GetPageText);
+NODE_SET_PROTOTYPE_METHOD(target, "getPageImage", _GetPageImage);
+NODE_SET_PROTOTYPE_METHOD(target, "setPageImage", _SetPageImage);
+NODE_SET_PROTOTYPE_METHOD(target, "setPageSize", _SetPageSize);
+NODE_SET_PROTOTYPE_METHOD(target, "getControllerSize", _GetControllerSize);
+NODE_SET_PROTOTYPE_METHOD(target, "calcSizeFromPage", _CalcSizeFromPage);
+NODE_SET_PROTOTYPE_METHOD(target, "getInternalBorder", _GetInternalBorder);
+NODE_SET_PROTOTYPE_METHOD(target, "setInternalBorder", _SetInternalBorder);
+NODE_SET_PROTOTYPE_METHOD(target, "setControlMargin", _SetControlMargin);
+NODE_SET_PROTOTYPE_METHOD(target, "getControlMargin", _GetControlMargin);
+NODE_SET_PROTOTYPE_METHOD(target, "isVertical", _IsVertical);
+NODE_SET_PROTOTYPE_METHOD(target, "setFitToCurrentPage", _SetFitToCurrentPage);
+NODE_SET_PROTOTYPE_METHOD(target, "getFitToCurrentPage", _GetFitToCurrentPage);
+NODE_SET_PROTOTYPE_METHOD(target, "getControlSizer", _GetControlSizer);
+NODE_SET_PROTOTYPE_METHOD(target, "deletePage", _DeletePage);
+NODE_SET_PROTOTYPE_METHOD(target, "removePage", _RemovePage);
+NODE_SET_PROTOTYPE_METHOD(target, "deleteAllPages", _DeleteAllPages);
+NODE_SET_PROTOTYPE_METHOD(target, "addPage", _AddPage);
+NODE_SET_PROTOTYPE_METHOD(target, "insertPage", _InsertPage);
+NODE_SET_PROTOTYPE_METHOD(target, "setSelection", _SetSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "changeSelection", _ChangeSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "advanceSelection", _AdvanceSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "hitTest", _HitTest);
+NODE_SET_PROTOTYPE_METHOD(target, "hasMultiplePages", _HasMultiplePages);
+NODE_SET_PROTOTYPE_METHOD(target, "acceptsFocus", _AcceptsFocus);
+NODE_SET_PROTOTYPE_METHOD(target, "canApplyThemeBorder", _CanApplyThemeBorder);
+NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::New(const wxNode_wxBookCtrlBase* obj) {
   v8::HandleScope scope;
@@ -144,7 +140,6 @@
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxBookCtrlBase).\n";
@@ -156,87 +151,75 @@
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_Create(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28709
+   * id: _27173
    */
   if(args.Length() == 6 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxPoint::AssignableFrom(args[2]->ToObject()->GetConstructorName()))) && (args[3]->IsNull() || (args[3]->IsObject() && wxNode_wxSize::AssignableFrom(args[3]->ToObject()->GetConstructorName()))) && args[4]->IsNumber() && args[5]->IsString()) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int winid = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _20518  */
-    wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _20628  */
-    long int style = (long int)args[4]->ToInt32()->Value(); /* type: _592  */
-    v8::String::AsciiValue name(args[5]->ToString()); /* type: _14975  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int winid = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
+wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _18992  */
+wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _19093  */
+long int style = (long int)args[4]->ToInt32()->Value(); /* type: _540  */
+v8::String::AsciiValue name(args[5]->ToString()); /* type: _13556  */
 
     bool returnVal = self->Create(parent, winid, *pos, *size, style, *name);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _28709
+   * id: _27173
    */
   if(args.Length() == 5 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxPoint::AssignableFrom(args[2]->ToObject()->GetConstructorName()))) && (args[3]->IsNull() || (args[3]->IsObject() && wxNode_wxSize::AssignableFrom(args[3]->ToObject()->GetConstructorName()))) && args[4]->IsNumber()) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int winid = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _20518  */
-    wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _20628  */
-    long int style = (long int)args[4]->ToInt32()->Value(); /* type: _592  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int winid = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
+wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _18992  */
+wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _19093  */
+long int style = (long int)args[4]->ToInt32()->Value(); /* type: _540  */
 
     bool returnVal = self->Create(parent, winid, *pos, *size, style);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _28709
+   * id: _27173
    */
   if(args.Length() == 4 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxPoint::AssignableFrom(args[2]->ToObject()->GetConstructorName()))) && (args[3]->IsNull() || (args[3]->IsObject() && wxNode_wxSize::AssignableFrom(args[3]->ToObject()->GetConstructorName())))) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int winid = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _20518  */
-    wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int winid = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
+wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _18992  */
+wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _19093  */
 
     bool returnVal = self->Create(parent, winid, *pos, *size);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _28709
+   * id: _27173
    */
   if(args.Length() == 3 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxPoint::AssignableFrom(args[2]->ToObject()->GetConstructorName())))) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int winid = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _20518  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int winid = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
+wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _18992  */
 
     bool returnVal = self->Create(parent, winid, *pos);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _28709
+   * id: _27173
    */
   if(args.Length() == 2 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber()) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int winid = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int winid = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
 
     bool returnVal = self->Create(parent, winid);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::Create).\n";
@@ -247,23 +230,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetPageCount(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28710
+   * id: _27174
    */
   if(args.Length() == 0) {
     
+    self->GetPageCount();
 
-    int returnVal = self->GetPageCount();
-
-    return scope.Close(v8::Number::New(returnVal));
+    return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetPageCount).\n";
@@ -274,24 +253,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetPage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28711
+   * id: _27175
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
 
     const wxWindow* returnVal = self->GetPage(n);
 
     return scope.Close(wxNode_wxWindow::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetPage).\n";
@@ -302,23 +277,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetCurrentPage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28712
+   * id: _27176
    */
   if(args.Length() == 0) {
     
-
     const wxWindow* returnVal = self->GetCurrentPage();
 
     return scope.Close(wxNode_wxWindow::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetCurrentPage).\n";
@@ -329,23 +300,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28713
+   * id: _27177
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetSelection();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetSelection).\n";
@@ -356,25 +323,21 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_SetPageText(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28714
+   * id: _27178
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsString()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    v8::String::AsciiValue strText(args[1]->ToString()); /* type: _14975  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
+v8::String::AsciiValue strText(args[1]->ToString()); /* type: _13556  */
 
     bool returnVal = self->SetPageText(n, *strText);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::SetPageText).\n";
@@ -385,24 +348,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetPageText(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28715
+   * id: _27179
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
 
     wxString returnVal = self->GetPageText(n);
 
     return scope.Close(v8::String::New(returnVal.mb_str()));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetPageText).\n";
@@ -413,24 +372,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetPageImage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28716
+   * id: _27180
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
 
     int returnVal = self->GetPageImage(n);
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetPageImage).\n";
@@ -441,25 +396,21 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_SetPageImage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28717
+   * id: _27181
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    int imageId = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
+int imageId = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     bool returnVal = self->SetPageImage(n, imageId);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::SetPageImage).\n";
@@ -470,24 +421,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_SetPageSize(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28718
+   * id: _27182
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* size = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* size = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->SetPageSize(*size);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::SetPageSize).\n";
@@ -498,23 +445,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetControllerSize(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28719
+   * id: _27183
    */
   if(args.Length() == 0) {
     
-
     wxSize returnVal = self->GetControllerSize();
 
     return scope.Close(wxNode_wxSize::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetControllerSize).\n";
@@ -525,24 +468,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_CalcSizeFromPage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28720
+   * id: _27184
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* sizePage = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* sizePage = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     wxSize returnVal = self->CalcSizeFromPage(*sizePage);
 
     return scope.Close(wxNode_wxSize::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::CalcSizeFromPage).\n";
@@ -553,23 +492,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetInternalBorder(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28721
+   * id: _27185
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetInternalBorder();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetInternalBorder).\n";
@@ -580,24 +515,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_SetInternalBorder(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28722
+   * id: _27186
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int border = (unsigned int)args[0]->ToInt32()->Value(); /* type: _44  */
-    
+    unsigned int border = (unsigned int)args[0]->ToInt32()->Value(); /* type: _1129  */
 
     self->SetInternalBorder(border);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::SetInternalBorder).\n";
@@ -608,24 +539,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_SetControlMargin(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28723
+   * id: _27187
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int margin = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int margin = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     self->SetControlMargin(margin);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::SetControlMargin).\n";
@@ -636,23 +563,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetControlMargin(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28724
+   * id: _27188
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetControlMargin();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetControlMargin).\n";
@@ -663,23 +586,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_IsVertical(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28725
+   * id: _27189
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->IsVertical();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::IsVertical).\n";
@@ -690,24 +609,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_SetFitToCurrentPage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28726
+   * id: _27190
    */
   if(args.Length() == 1 && args[0]->IsBoolean()) {
-    bool fit = args[0]->ToBoolean()->Value(); /* type: _14830  */
-    
+    bool fit = args[0]->ToBoolean()->Value(); /* type: _13422  */
 
     self->SetFitToCurrentPage(fit);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::SetFitToCurrentPage).\n";
@@ -718,23 +633,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetFitToCurrentPage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28727
+   * id: _27191
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->GetFitToCurrentPage();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetFitToCurrentPage).\n";
@@ -745,23 +656,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetControlSizer(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28728
+   * id: _27192
    */
   if(args.Length() == 0) {
     
-
     wxSizer* returnVal = self->GetControlSizer();
 
     return scope.Close(wxNode_wxSizer::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetControlSizer).\n";
@@ -772,24 +679,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_DeletePage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28729
+   * id: _27193
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
 
     bool returnVal = self->DeletePage(n);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::DeletePage).\n";
@@ -800,24 +703,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_RemovePage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28730
+   * id: _27194
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
 
     bool returnVal = self->RemovePage(n);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::RemovePage).\n";
@@ -828,23 +727,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_DeleteAllPages(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28731
+   * id: _27195
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->DeleteAllPages();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::DeleteAllPages).\n";
@@ -855,54 +750,46 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_AddPage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28732
+   * id: _27196
    */
   if(args.Length() == 4 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsString() && args[2]->IsBoolean() && args[3]->IsNumber()) {
-    wxNode_wxWindow* page = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue text(args[1]->ToString()); /* type: _14975  */
-    bool bSelect = args[2]->ToBoolean()->Value(); /* type: _14830  */
-    int imageId = (int)args[3]->ToInt32()->Value(); /* type: _165  */
-    
+    wxNode_wxWindow* page = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue text(args[1]->ToString()); /* type: _13556  */
+bool bSelect = args[2]->ToBoolean()->Value(); /* type: _13422  */
+int imageId = (int)args[3]->ToInt32()->Value(); /* type: _142  */
 
     bool returnVal = self->AddPage(page, *text, bSelect, imageId);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _28732
+   * id: _27196
    */
   if(args.Length() == 3 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsString() && args[2]->IsBoolean()) {
-    wxNode_wxWindow* page = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue text(args[1]->ToString()); /* type: _14975  */
-    bool bSelect = args[2]->ToBoolean()->Value(); /* type: _14830  */
-    
+    wxNode_wxWindow* page = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue text(args[1]->ToString()); /* type: _13556  */
+bool bSelect = args[2]->ToBoolean()->Value(); /* type: _13422  */
 
     bool returnVal = self->AddPage(page, *text, bSelect);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _28732
+   * id: _27196
    */
   if(args.Length() == 2 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsString()) {
-    wxNode_wxWindow* page = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue text(args[1]->ToString()); /* type: _14975  */
-    
+    wxNode_wxWindow* page = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue text(args[1]->ToString()); /* type: _13556  */
 
     bool returnVal = self->AddPage(page, *text);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::AddPage).\n";
@@ -913,57 +800,49 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_InsertPage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28733
+   * id: _27197
    */
   if(args.Length() == 5 && args[0]->IsNumber() && (args[1]->IsNull() || (args[1]->IsObject() && wxNode_wxWindow::AssignableFrom(args[1]->ToObject()->GetConstructorName()))) && args[2]->IsString() && args[3]->IsBoolean() && args[4]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    wxNode_wxWindow* page = args[1]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[1]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue text(args[2]->ToString()); /* type: _14975  */
-    bool bSelect = args[3]->ToBoolean()->Value(); /* type: _14830  */
-    int imageId = (int)args[4]->ToInt32()->Value(); /* type: _165  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
+wxNode_wxWindow* page = args[1]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[1]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue text(args[2]->ToString()); /* type: _13556  */
+bool bSelect = args[3]->ToBoolean()->Value(); /* type: _13422  */
+int imageId = (int)args[4]->ToInt32()->Value(); /* type: _142  */
 
     bool returnVal = self->InsertPage(n, page, *text, bSelect, imageId);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _28733
+   * id: _27197
    */
   if(args.Length() == 4 && args[0]->IsNumber() && (args[1]->IsNull() || (args[1]->IsObject() && wxNode_wxWindow::AssignableFrom(args[1]->ToObject()->GetConstructorName()))) && args[2]->IsString() && args[3]->IsBoolean()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    wxNode_wxWindow* page = args[1]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[1]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue text(args[2]->ToString()); /* type: _14975  */
-    bool bSelect = args[3]->ToBoolean()->Value(); /* type: _14830  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
+wxNode_wxWindow* page = args[1]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[1]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue text(args[2]->ToString()); /* type: _13556  */
+bool bSelect = args[3]->ToBoolean()->Value(); /* type: _13422  */
 
     bool returnVal = self->InsertPage(n, page, *text, bSelect);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _28733
+   * id: _27197
    */
   if(args.Length() == 3 && args[0]->IsNumber() && (args[1]->IsNull() || (args[1]->IsObject() && wxNode_wxWindow::AssignableFrom(args[1]->ToObject()->GetConstructorName()))) && args[2]->IsString()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    wxNode_wxWindow* page = args[1]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[1]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue text(args[2]->ToString()); /* type: _14975  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
+wxNode_wxWindow* page = args[1]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[1]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue text(args[2]->ToString()); /* type: _13556  */
 
     bool returnVal = self->InsertPage(n, page, *text);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::InsertPage).\n";
@@ -974,24 +853,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_SetSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28734
+   * id: _27198
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
 
     int returnVal = self->SetSelection(n);
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::SetSelection).\n";
@@ -1002,24 +877,20 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_ChangeSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28735
+   * id: _27199
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    unsigned int n = (unsigned int)args[0]->ToInt32()->Value(); /* type: _8711  */
-    
+    long unsigned int n = (long unsigned int)args[0]->ToInt32()->Value(); /* type: _7931  */
 
     int returnVal = self->ChangeSelection(n);
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::ChangeSelection).\n";
@@ -1030,35 +901,29 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_AdvanceSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28736
+   * id: _27200
    */
   if(args.Length() == 1 && args[0]->IsBoolean()) {
-    bool forward = args[0]->ToBoolean()->Value(); /* type: _14830  */
-    
+    bool forward = args[0]->ToBoolean()->Value(); /* type: _13422  */
 
     self->AdvanceSelection(forward);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _28736
+   * id: _27200
    */
   if(args.Length() == 0) {
     
-
     self->AdvanceSelection();
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::AdvanceSelection).\n";
@@ -1069,37 +934,31 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_HitTest(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28737
+   * id: _27201
    */
   if(args.Length() == 2 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxPoint::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && false) {
-    wxNode_wxPoint* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _20518  */
-    long int arg1; /* type: _20486 * */
-    
+    wxNode_wxPoint* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _18992  */
+long int arg1; /* type: _18956 * */
 
     int returnVal = self->HitTest(*arg0, &arg1);
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
   /*
-   * id: _28737
+   * id: _27201
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxPoint::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxPoint* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _20518  */
-    
+    wxNode_wxPoint* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _18992  */
 
     int returnVal = self->HitTest(*arg0);
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::HitTest).\n";
@@ -1110,23 +969,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_HasMultiplePages(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28738
+   * id: _27202
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->HasMultiplePages();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::HasMultiplePages).\n";
@@ -1137,23 +992,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_AcceptsFocus(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28739
+   * id: _27203
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->AcceptsFocus();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::AcceptsFocus).\n";
@@ -1164,23 +1015,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_CanApplyThemeBorder(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28740
+   * id: _27204
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->CanApplyThemeBorder();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::CanApplyThemeBorder).\n";
@@ -1191,23 +1038,19 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxBookCtrlBase::_GetClassInfo(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxBookCtrlBase* self = unwrap<wxNode_wxBookCtrlBase>(args.This());
 
-  
   /*
-   * id: _28757
+   * id: _27221
    */
   if(args.Length() == 0) {
     
-
     wxClassInfo* returnVal = self->GetClassInfo();
 
     return scope.Close(wxNode_wxClassInfo::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxBookCtrlBase::GetClassInfo).\n";
@@ -1218,6 +1061,4 @@
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

@@ -7,7 +7,6 @@
 class wxNode_wxSize;
 class wxNode_wxPoint;
 
-
 class wxNode_wxSize : public wxSize, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -19,39 +18,31 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxSize* obj);
   static v8::Handle<v8::Value> NewCopy(const wxSize& obj);
 
-  
-  
   wxNode_wxSize(wxSize& arg0);
-  
   wxNode_wxSize();
-  
   wxNode_wxSize(int xx, int yy);
-  
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _IncTo(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _DecTo(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _IncBy(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _DecBy(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _Scale(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _Set(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _SetWidth(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _SetHeight(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetWidth(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetHeight(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _IsFullySpecified(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _SetDefaults(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetX(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetY(const v8::Arguments& args);
-  
+static v8::Handle<v8::Value> _DecTo(const v8::Arguments& args);
+static v8::Handle<v8::Value> _IncBy(const v8::Arguments& args);
+static v8::Handle<v8::Value> _DecBy(const v8::Arguments& args);
+static v8::Handle<v8::Value> _Scale(const v8::Arguments& args);
+static v8::Handle<v8::Value> _Set(const v8::Arguments& args);
+static v8::Handle<v8::Value> _SetWidth(const v8::Arguments& args);
+static v8::Handle<v8::Value> _SetHeight(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetWidth(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetHeight(const v8::Arguments& args);
+static v8::Handle<v8::Value> _IsFullySpecified(const v8::Arguments& args);
+static v8::Handle<v8::Value> _SetDefaults(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetX(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetY(const v8::Arguments& args);
   static v8::Handle<v8::Value> _xGet(v8::Local<v8::String> name, const v8::AccessorInfo& info);
   static void _xSet(v8::Local<v8::String> name, v8::Local<v8::Value> val, const v8::AccessorInfo& info);
-  static v8::Handle<v8::Value> _yGet(v8::Local<v8::String> name, const v8::AccessorInfo& info);
+static v8::Handle<v8::Value> _yGet(v8::Local<v8::String> name, const v8::AccessorInfo& info);
   static void _ySet(v8::Local<v8::String> name, v8::Local<v8::Value> val, const v8::AccessorInfo& info);
-  
 
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };

@@ -9,7 +9,6 @@ class wxNode_wxEvent;
 class wxNode_wxCommandEvent;
 class wxNode_wxClientData;
 
-
 class wxNode_wxCommandEvent : public wxCommandEvent, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -21,36 +20,27 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxCommandEvent* obj);
   static v8::Handle<v8::Value> NewCopy(const wxCommandEvent& obj);
 
-  
-  
   wxNode_wxCommandEvent(int commandType, int winid);
-  
   wxNode_wxCommandEvent(int commandType);
-  
   wxNode_wxCommandEvent();
-  
   wxNode_wxCommandEvent(wxCommandEvent& event);
-  
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _SetClientData(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetClientData(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _SetClientObject(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetClientObject(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetString(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetSelection(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _IsChecked(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _IsSelection(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _Clone(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetEventCategory(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _GetClassInfo(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _wxCreateObject(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetClientData(const v8::Arguments& args);
+static v8::Handle<v8::Value> _SetClientObject(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetClientObject(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetString(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetSelection(const v8::Arguments& args);
+static v8::Handle<v8::Value> _IsChecked(const v8::Arguments& args);
+static v8::Handle<v8::Value> _IsSelection(const v8::Arguments& args);
+static v8::Handle<v8::Value> _Clone(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetEventCategory(const v8::Arguments& args);
+static v8::Handle<v8::Value> _GetClassInfo(const v8::Arguments& args);
+static v8::Handle<v8::Value> _wxCreateObject(const v8::Arguments& args);
   
-  
-
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 

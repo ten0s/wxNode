@@ -14,8 +14,8 @@
 #include <wx/event.h>
 #include <wx/artprov.h>
 #include <wx/infobar.h>
-#include <wx/webview.h>
-#include <wx/webviewarchivehandler.h>
+//DKL #include <wx/webview.h>
+//DKL #include <wx/webviewarchivehandler.h>
 #include <v8.h>
 #include <node.h>
 #include "wxNodeObject.h"

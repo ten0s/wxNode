@@ -6,21 +6,16 @@
 #include "wxNode_wxRegion.h"
 #include "wxNode_wxGraphicsPath.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxNonOwnedWindow::s_ct;
 
-
-
 /*
- * id: _16084
+ * id: _14657
  */
 wxNode_wxNonOwnedWindow::wxNode_wxNonOwnedWindow()
   : wxNonOwnedWindow()
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxNonOwnedWindow::Init(v8::Handle<v8::Object> target) {
@@ -40,9 +35,7 @@ wxNode_wxNonOwnedWindow::wxNode_wxNonOwnedWindow()
 /*static*/ void wxNode_wxNonOwnedWindow::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxWindow::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "setShape", _SetShape);
-  
-  
-}
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxNonOwnedWindow::New(const wxNode_wxNonOwnedWindow* obj) {
   v8::HandleScope scope;
@@ -125,7 +118,6 @@ wxNode_wxNonOwnedWindow::wxNode_wxNonOwnedWindow()
 
   if(!strcmp("DocChildFrame", className)) { return true; }
   if(!strcmp("SplashScreen", className)) { return true; }
-  if(!strcmp("HtmlHelpFrame", className)) { return true; }
   if(!strcmp("MDIChildFrameBase", className)) { return true; }
 
   if(!strcmp("TDIChildFrame", className)) { return true; }
@@ -141,6 +133,7 @@ wxNode_wxNonOwnedWindow::wxNode_wxNonOwnedWindow()
   if(!strcmp("MiniFrame", className)) { return true; }
 
   if(!strcmp("AuiFloatingFrame", className)) { return true; }
+  if(!strcmp("HtmlHelpFrame", className)) { return true; }
   if(!strcmp("MDIParentFrameBase", className)) { return true; }
 
   if(!strcmp("MDIParentFrame", className)) { return true; }
@@ -214,21 +207,16 @@ wxNode_wxNonOwnedWindow::wxNode_wxNonOwnedWindow()
 /*static*/ v8::Handle<v8::Value> wxNode_wxNonOwnedWindow::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _16084
+   * id: _14657
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxNonOwnedWindow *self = new wxNode_wxNonOwnedWindow();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxNonOwnedWindow).\n";
@@ -240,36 +228,30 @@ wxNode_wxNonOwnedWindow::wxNode_wxNonOwnedWindow()
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNonOwnedWindow::_SetShape(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNonOwnedWindow* self = unwrap<wxNode_wxNonOwnedWindow>(args.This());
 
-  
   /*
-   * id: _30585
+   * id: _28939
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxRegion::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxRegion* region = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxRegion>(args[0]->ToObject()); /* type: _59116  */
-    
+    wxNode_wxRegion* region = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxRegion>(args[0]->ToObject()); /* type: _56953  */
 
     bool returnVal = self->SetShape(*region);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
   /*
-   * id: _30586
+   * id: _28940
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxGraphicsPath::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxGraphicsPath* path = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxGraphicsPath>(args[0]->ToObject()); /* type: _59117  */
-    
+    wxNode_wxGraphicsPath* path = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxGraphicsPath>(args[0]->ToObject()); /* type: _56954  */
 
     bool returnVal = self->SetShape(*path);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNonOwnedWindow::SetShape).\n";
@@ -280,6 +262,4 @@ wxNode_wxNonOwnedWindow::wxNode_wxNonOwnedWindow()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

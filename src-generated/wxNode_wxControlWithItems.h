@@ -7,7 +7,6 @@
 class wxNode_wxEvtHandler;
 class wxNode_wxWindowWithItems;
 
-
 class wxNode_wxControlWithItems : public wxControlWithItems, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -19,15 +18,12 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxControlWithItems* obj);
   static v8::Handle<v8::Value> NewCopy(const wxControlWithItems& obj);
 
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _ShouldInheritColours(const v8::Arguments& args);
   
-  
-
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 

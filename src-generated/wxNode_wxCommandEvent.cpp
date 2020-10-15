@@ -7,48 +7,40 @@
 #include "wxNode_wxClassInfo.h"
 #include "wxNode_wxObject.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxCommandEvent::s_ct;
 
-
-
 /*
- * id: _16540
+ * id: _15073
  */
 wxNode_wxCommandEvent::wxNode_wxCommandEvent(int commandType, int winid)
   : wxCommandEvent(commandType, winid)
 {
 
 }
-
 /*
- * id: _16540
+ * id: _15073
  */
 wxNode_wxCommandEvent::wxNode_wxCommandEvent(int commandType)
   : wxCommandEvent(commandType)
 {
 
 }
-
 /*
- * id: _16540
+ * id: _15073
  */
 wxNode_wxCommandEvent::wxNode_wxCommandEvent()
   : wxCommandEvent()
 {
 
 }
-
 /*
- * id: _16541
+ * id: _15074
  */
 wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   : wxCommandEvent(event)
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxCommandEvent::Init(v8::Handle<v8::Object> target) {
@@ -68,20 +60,18 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
 /*static*/ void wxNode_wxCommandEvent::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxEvent::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "setClientData", _SetClientData);
-  NODE_SET_PROTOTYPE_METHOD(target, "getClientData", _GetClientData);
-  NODE_SET_PROTOTYPE_METHOD(target, "setClientObject", _SetClientObject);
-  NODE_SET_PROTOTYPE_METHOD(target, "getClientObject", _GetClientObject);
-  NODE_SET_PROTOTYPE_METHOD(target, "getString", _GetString);
-  NODE_SET_PROTOTYPE_METHOD(target, "getSelection", _GetSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "isChecked", _IsChecked);
-  NODE_SET_PROTOTYPE_METHOD(target, "isSelection", _IsSelection);
-  NODE_SET_PROTOTYPE_METHOD(target, "clone", _Clone);
-  NODE_SET_PROTOTYPE_METHOD(target, "getEventCategory", _GetEventCategory);
-  NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
-  NODE_SET_METHOD(target, "wxCreateObject", _wxCreateObject);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "getClientData", _GetClientData);
+NODE_SET_PROTOTYPE_METHOD(target, "setClientObject", _SetClientObject);
+NODE_SET_PROTOTYPE_METHOD(target, "getClientObject", _GetClientObject);
+NODE_SET_PROTOTYPE_METHOD(target, "getString", _GetString);
+NODE_SET_PROTOTYPE_METHOD(target, "getSelection", _GetSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "isChecked", _IsChecked);
+NODE_SET_PROTOTYPE_METHOD(target, "isSelection", _IsSelection);
+NODE_SET_PROTOTYPE_METHOD(target, "clone", _Clone);
+NODE_SET_PROTOTYPE_METHOD(target, "getEventCategory", _GetEventCategory);
+NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
+NODE_SET_METHOD(target, "wxCreateObject", _wxCreateObject);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::New(const wxNode_wxCommandEvent* obj) {
   v8::HandleScope scope;
@@ -155,7 +145,6 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
 
   if(!strcmp("AuiNotebookEvent", className)) { return true; }
   if(!strcmp("SplitterEvent", className)) { return true; }
-  if(!strcmp("WizardEvent", className)) { return true; }
   if(!strcmp("HeaderCtrlEvent", className)) { return true; }
   if(!strcmp("TreeEvent", className)) { return true; }
   if(!strcmp("GridEvent", className)) { return true; }
@@ -164,7 +153,7 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   if(!strcmp("RichTextEvent", className)) { return true; }
   if(!strcmp("DataViewEvent", className)) { return true; }
   if(!strcmp("GridSizeEvent", className)) { return true; }
-  if(!strcmp("WebViewEvent", className)) { return true; }
+  if(!strcmp("WizardEvent", className)) { return true; }
   if(!strcmp("AuiToolBarEvent", className)) { return true; }
   if(!strcmp("ListEvent", className)) { return true; }
   if(!strcmp("GridRangeSelectEvent", className)) { return true; }
@@ -196,61 +185,50 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _16540
+   * id: _15073
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int commandType = (int)args[0]->ToInt32()->Value(); /* type: _986  */
-    int winid = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    int commandType = (int)args[0]->ToInt32()->Value(); /* type: _907  */
+int winid = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     wxNode_wxCommandEvent *self = new wxNode_wxCommandEvent(commandType, winid);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16540
+   * id: _15073
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int commandType = (int)args[0]->ToInt32()->Value(); /* type: _986  */
-    
+    int commandType = (int)args[0]->ToInt32()->Value(); /* type: _907  */
 
     wxNode_wxCommandEvent *self = new wxNode_wxCommandEvent(commandType);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16540
+   * id: _15073
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxCommandEvent *self = new wxNode_wxCommandEvent();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _16541
+   * id: _15074
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxCommandEvent::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxCommandEvent* event = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxCommandEvent>(args[0]->ToObject()); /* type: _59310  */
-    
+    wxNode_wxCommandEvent* event = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxCommandEvent>(args[0]->ToObject()); /* type: _57140  */
 
     wxNode_wxCommandEvent *self = new wxNode_wxCommandEvent(*event);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxCommandEvent).\n";
@@ -262,12 +240,10 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_SetClientData(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::SetClientData).\n";
@@ -278,23 +254,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_GetClientData(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16543
+   * id: _15076
    */
   if(args.Length() == 0) {
     
-
     self->GetClientData();
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::GetClientData).\n";
@@ -305,24 +277,20 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_SetClientObject(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16544
+   * id: _15077
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxClientData::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxClientData* clientObject = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxClientData>(args[0]->ToObject()); /* type: _59309 * */
-    
+    wxNode_wxClientData* clientObject = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxClientData>(args[0]->ToObject()); /* type: _57139 * */
 
     self->SetClientObject(clientObject);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::SetClientObject).\n";
@@ -333,23 +301,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_GetClientObject(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16545
+   * id: _15078
    */
   if(args.Length() == 0) {
     
-
     wxClientData* returnVal = self->GetClientObject();
 
     return scope.Close(wxNode_wxClientData::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::GetClientObject).\n";
@@ -360,23 +324,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_GetString(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16546
+   * id: _15079
    */
   if(args.Length() == 0) {
     
-
     wxString returnVal = self->GetString();
 
     return scope.Close(v8::String::New(returnVal.mb_str()));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::GetString).\n";
@@ -387,23 +347,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_GetSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16547
+   * id: _15080
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetSelection();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::GetSelection).\n";
@@ -414,23 +370,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_IsChecked(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16548
+   * id: _15081
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->IsChecked();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::IsChecked).\n";
@@ -441,23 +393,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_IsSelection(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16549
+   * id: _15082
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->IsSelection();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::IsSelection).\n";
@@ -468,23 +416,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_Clone(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16550
+   * id: _15083
    */
   if(args.Length() == 0) {
     
-
     wxEvent* returnVal = self->Clone();
 
     return scope.Close(wxNode_wxEvent::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::Clone).\n";
@@ -495,23 +439,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_GetEventCategory(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16551
+   * id: _15084
    */
   if(args.Length() == 0) {
     
-
     int returnVal = (int)self->GetEventCategory();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::GetEventCategory).\n";
@@ -522,23 +462,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_GetClassInfo(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16553
+   * id: _15086
    */
   if(args.Length() == 0) {
     
-
     wxClassInfo* returnVal = self->GetClassInfo();
 
     return scope.Close(wxNode_wxClassInfo::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::GetClassInfo).\n";
@@ -549,23 +485,19 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxCommandEvent::_wxCreateObject(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxCommandEvent* self = unwrap<wxNode_wxCommandEvent>(args.This());
 
-  
   /*
-   * id: _16554
+   * id: _15087
    */
   if(args.Length() == 0) {
     
-
     wxObject* returnVal = wxCommandEvent::wxCreateObject();
 
     return scope.Close(wxNode_wxObject::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxCommandEvent::wxCreateObject).\n";
@@ -576,6 +508,4 @@ wxNode_wxCommandEvent::wxNode_wxCommandEvent(wxCommandEvent& event)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

@@ -3,48 +3,40 @@
 #include "wxNode_wxPoint.h"
 #include "wxNode_wxRealPoint.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxPoint::s_ct;
 
-
-
 /*
- * id: _26648
+ * id: _25079
  */
 wxNode_wxPoint::wxNode_wxPoint(wxPoint& arg0)
   : wxPoint(arg0)
 {
 
 }
-
 /*
- * id: _26649
+ * id: _25080
  */
 wxNode_wxPoint::wxNode_wxPoint()
   : wxPoint()
 {
 
 }
-
 /*
- * id: _26650
+ * id: _25081
  */
 wxNode_wxPoint::wxNode_wxPoint(int xx, int yy)
   : wxPoint(xx, yy)
 {
 
 }
-
 /*
- * id: _26651
+ * id: _25082
  */
 wxNode_wxPoint::wxNode_wxPoint(wxRealPoint& pt)
   : wxPoint(pt)
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxPoint::Init(v8::Handle<v8::Object> target) {
@@ -64,11 +56,9 @@ wxNode_wxPoint::wxNode_wxPoint(wxRealPoint& pt)
 /*static*/ void wxNode_wxPoint::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxEvtHandler::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "isFullySpecified", _IsFullySpecified);
-  NODE_SET_PROTOTYPE_METHOD(target, "setDefaults", _SetDefaults);
-  
+NODE_SET_PROTOTYPE_METHOD(target, "setDefaults", _SetDefaults);
   target->PrototypeTemplate()->SetAccessor(v8::String::New("x"), _xGet, _xSet);
-  target->PrototypeTemplate()->SetAccessor(v8::String::New("y"), _yGet, _ySet);
-  
+target->PrototypeTemplate()->SetAccessor(v8::String::New("y"), _yGet, _ySet);
 }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxPoint::New(const wxNode_wxPoint* obj) {
@@ -138,61 +128,50 @@ wxNode_wxPoint::wxNode_wxPoint(wxRealPoint& pt)
 /*static*/ v8::Handle<v8::Value> wxNode_wxPoint::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _26648
+   * id: _25079
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxPoint::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxPoint* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _20518  */
-    
+    wxNode_wxPoint* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _18992  */
 
     wxNode_wxPoint *self = new wxNode_wxPoint(*arg0);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _26649
+   * id: _25080
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxPoint *self = new wxNode_wxPoint();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _26650
+   * id: _25081
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int xx = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    int yy = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    int xx = (int)args[0]->ToInt32()->Value(); /* type: _142  */
+int yy = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     wxNode_wxPoint *self = new wxNode_wxPoint(xx, yy);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _26651
+   * id: _25082
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxRealPoint::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxRealPoint* pt = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxRealPoint>(args[0]->ToObject()); /* type: _20629  */
-    
+    wxNode_wxRealPoint* pt = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxRealPoint>(args[0]->ToObject()); /* type: _19094  */
 
     wxNode_wxPoint *self = new wxNode_wxPoint(*pt);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxPoint).\n";
@@ -204,23 +183,19 @@ wxNode_wxPoint::wxNode_wxPoint(wxRealPoint& pt)
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxPoint::_IsFullySpecified(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxPoint* self = unwrap<wxNode_wxPoint>(args.This());
 
-  
   /*
-   * id: _26656
+   * id: _25087
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->IsFullySpecified();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxPoint::IsFullySpecified).\n";
@@ -231,24 +206,20 @@ wxNode_wxPoint::wxNode_wxPoint(wxRealPoint& pt)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxPoint::_SetDefaults(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxPoint* self = unwrap<wxNode_wxPoint>(args.This());
 
-  
   /*
-   * id: _26657
+   * id: _25088
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxPoint::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxPoint* pt = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _20518  */
-    
+    wxNode_wxPoint* pt = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[0]->ToObject()); /* type: _18992  */
 
     self->SetDefaults(*pt);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxPoint::SetDefaults).\n";
@@ -259,8 +230,6 @@ wxNode_wxPoint::wxNode_wxPoint(wxRealPoint& pt)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxPoint::_xGet(v8::Local<v8::String> name, const v8::AccessorInfo& info) {
   v8::HandleScope scope;
@@ -275,7 +244,6 @@ wxNode_wxPoint::wxNode_wxPoint(wxRealPoint& pt)
 
   self->x = val->ToNumber()->Value();
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxPoint::_yGet(v8::Local<v8::String> name, const v8::AccessorInfo& info) {
   v8::HandleScope scope;
   wxNode_wxPoint* self = unwrap<wxNode_wxPoint>(info.This());
@@ -289,4 +257,3 @@ wxNode_wxPoint::wxNode_wxPoint(wxRealPoint& pt)
 
   self->y = val->ToNumber()->Value();
 }
-

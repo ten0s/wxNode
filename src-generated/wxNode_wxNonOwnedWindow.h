@@ -9,7 +9,6 @@ class wxNode_wxWindow;
 class wxNode_wxRegion;
 class wxNode_wxGraphicsPath;
 
-
 class wxNode_wxNonOwnedWindow : public wxNonOwnedWindow, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -21,19 +20,13 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxNonOwnedWindow* obj);
   static v8::Handle<v8::Value> NewCopy(const wxNonOwnedWindow& obj);
 
-  
-  
   wxNode_wxNonOwnedWindow();
-  
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _SetShape(const v8::Arguments& args);
   
-  
-
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 

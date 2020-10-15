@@ -10,7 +10,6 @@ class wxNode_wxWindow;
 class wxNode_wxPoint;
 class wxNode_wxSize;
 
-
 class wxNode_wxPanel : public wxPanel, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -22,38 +21,23 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxPanel* obj);
   static v8::Handle<v8::Value> NewCopy(const wxPanel& obj);
 
-  
-  
   wxNode_wxPanel();
-  
   wxNode_wxPanel(wxWindow* parent, int winid, wxPoint& pos, wxSize& size, long int style, const wxString& name);
-  
   wxNode_wxPanel(wxWindow* parent, int winid, wxPoint& pos, wxSize& size, long int style);
-  
   wxNode_wxPanel(wxWindow* parent, int winid, wxPoint& pos, wxSize& size);
-  
   wxNode_wxPanel(wxWindow* parent, int winid, wxPoint& pos);
-  
   wxNode_wxPanel(wxWindow* parent, int winid);
-  
   wxNode_wxPanel(wxWindow* parent);
-  
   wxNode_wxPanel(wxWindow* parent, int x, int y, int width, int height, long int style, const wxString& name);
-  
   wxNode_wxPanel(wxWindow* parent, int x, int y, int width, int height, long int style);
-  
   wxNode_wxPanel(wxWindow* parent, int x, int y, int width, int height);
-  
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _Create(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _InitDialog(const v8::Arguments& args);
+static v8::Handle<v8::Value> _InitDialog(const v8::Arguments& args);
   
-  
-
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 

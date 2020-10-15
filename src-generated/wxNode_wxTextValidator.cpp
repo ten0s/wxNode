@@ -9,48 +9,40 @@
 #include "wxNode_wxArrayString.h"
 #include "wxNode_wxClassInfo.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxTextValidator::s_ct;
 
-
-
 /*
- * id: _41312
+ * id: _39273
  */
 wxNode_wxTextValidator::wxNode_wxTextValidator(long int style,  wxString* val)
   : wxTextValidator(style, val)
 {
 
 }
-
 /*
- * id: _41312
+ * id: _39273
  */
 wxNode_wxTextValidator::wxNode_wxTextValidator(long int style)
   : wxTextValidator(style)
 {
 
 }
-
 /*
- * id: _41312
+ * id: _39273
  */
 wxNode_wxTextValidator::wxNode_wxTextValidator()
   : wxTextValidator()
 {
 
 }
-
 /*
- * id: _41313
+ * id: _39274
  */
 wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   : wxTextValidator(val)
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxTextValidator::Init(v8::Handle<v8::Object> target) {
@@ -70,26 +62,24 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
 /*static*/ void wxNode_wxTextValidator::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxValidator::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "clone", _Clone);
-  NODE_SET_PROTOTYPE_METHOD(target, "copy", _Copy);
-  NODE_SET_PROTOTYPE_METHOD(target, "validate", _Validate);
-  NODE_SET_PROTOTYPE_METHOD(target, "transferToWindow", _TransferToWindow);
-  NODE_SET_PROTOTYPE_METHOD(target, "transferFromWindow", _TransferFromWindow);
-  NODE_SET_PROTOTYPE_METHOD(target, "onChar", _OnChar);
-  NODE_SET_PROTOTYPE_METHOD(target, "getStyle", _GetStyle);
-  NODE_SET_PROTOTYPE_METHOD(target, "setStyle", _SetStyle);
-  NODE_SET_PROTOTYPE_METHOD(target, "getTextEntry", _GetTextEntry);
-  NODE_SET_PROTOTYPE_METHOD(target, "setCharIncludes", _SetCharIncludes);
-  NODE_SET_PROTOTYPE_METHOD(target, "setIncludes", _SetIncludes);
-  NODE_SET_PROTOTYPE_METHOD(target, "getIncludes", _GetIncludes);
-  NODE_SET_PROTOTYPE_METHOD(target, "setCharExcludes", _SetCharExcludes);
-  NODE_SET_PROTOTYPE_METHOD(target, "setExcludes", _SetExcludes);
-  NODE_SET_PROTOTYPE_METHOD(target, "getExcludes", _GetExcludes);
-  NODE_SET_PROTOTYPE_METHOD(target, "hasFlag", _HasFlag);
-  NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
-  NODE_SET_METHOD(target, "wxCreateObject", _wxCreateObject);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "copy", _Copy);
+NODE_SET_PROTOTYPE_METHOD(target, "validate", _Validate);
+NODE_SET_PROTOTYPE_METHOD(target, "transferToWindow", _TransferToWindow);
+NODE_SET_PROTOTYPE_METHOD(target, "transferFromWindow", _TransferFromWindow);
+NODE_SET_PROTOTYPE_METHOD(target, "onChar", _OnChar);
+NODE_SET_PROTOTYPE_METHOD(target, "getStyle", _GetStyle);
+NODE_SET_PROTOTYPE_METHOD(target, "setStyle", _SetStyle);
+NODE_SET_PROTOTYPE_METHOD(target, "getTextEntry", _GetTextEntry);
+NODE_SET_PROTOTYPE_METHOD(target, "setCharIncludes", _SetCharIncludes);
+NODE_SET_PROTOTYPE_METHOD(target, "setIncludes", _SetIncludes);
+NODE_SET_PROTOTYPE_METHOD(target, "getIncludes", _GetIncludes);
+NODE_SET_PROTOTYPE_METHOD(target, "setCharExcludes", _SetCharExcludes);
+NODE_SET_PROTOTYPE_METHOD(target, "setExcludes", _SetExcludes);
+NODE_SET_PROTOTYPE_METHOD(target, "getExcludes", _GetExcludes);
+NODE_SET_PROTOTYPE_METHOD(target, "hasFlag", _HasFlag);
+NODE_SET_PROTOTYPE_METHOD(target, "getClassInfo", _GetClassInfo);
+NODE_SET_METHOD(target, "wxCreateObject", _wxCreateObject);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::New(const wxNode_wxTextValidator* obj) {
   v8::HandleScope scope;
@@ -158,61 +148,50 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _41312
+   * id: _39273
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsString()) {
-    long int style = (long int)args[0]->ToInt32()->Value(); /* type: _592  */
-    wxString* val; /* type: _24013 * */
-    
+    long int style = (long int)args[0]->ToInt32()->Value(); /* type: _540  */
+wxString* val; /* type: _22494 * */
 
     wxNode_wxTextValidator *self = new wxNode_wxTextValidator(style, val);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _41312
+   * id: _39273
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    long int style = (long int)args[0]->ToInt32()->Value(); /* type: _592  */
-    
+    long int style = (long int)args[0]->ToInt32()->Value(); /* type: _540  */
 
     wxNode_wxTextValidator *self = new wxNode_wxTextValidator(style);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _41312
+   * id: _39273
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxTextValidator *self = new wxNode_wxTextValidator();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _41313
+   * id: _39274
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxTextValidator::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxTextValidator* val = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxTextValidator>(args[0]->ToObject()); /* type: _64328  */
-    
+    wxNode_wxTextValidator* val = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxTextValidator>(args[0]->ToObject()); /* type: _61952  */
 
     wxNode_wxTextValidator *self = new wxNode_wxTextValidator(*val);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxTextValidator).\n";
@@ -224,23 +203,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_Clone(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41315
+   * id: _39276
    */
   if(args.Length() == 0) {
     
-
     wxObject* returnVal = self->Clone();
 
     return scope.Close(wxNode_wxObject::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::Clone).\n";
@@ -251,24 +226,20 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_Copy(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41316
+   * id: _39277
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxTextValidator::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxTextValidator* val = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxTextValidator>(args[0]->ToObject()); /* type: _64328  */
-    
+    wxNode_wxTextValidator* val = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxTextValidator>(args[0]->ToObject()); /* type: _61952  */
 
     bool returnVal = self->Copy(*val);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::Copy).\n";
@@ -279,24 +250,20 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_Validate(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41317
+   * id: _39278
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
 
     bool returnVal = self->Validate(parent);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::Validate).\n";
@@ -307,23 +274,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_TransferToWindow(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41318
+   * id: _39279
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->TransferToWindow();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::TransferToWindow).\n";
@@ -334,23 +297,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_TransferFromWindow(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41319
+   * id: _39280
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->TransferFromWindow();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::TransferFromWindow).\n";
@@ -361,12 +320,10 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_OnChar(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::OnChar).\n";
@@ -377,23 +334,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_GetStyle(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41321
+   * id: _39282
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetStyle();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::GetStyle).\n";
@@ -404,24 +357,20 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_SetStyle(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41322
+   * id: _39283
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    long int style = (long int)args[0]->ToInt32()->Value(); /* type: _592  */
-    
+    long int style = (long int)args[0]->ToInt32()->Value(); /* type: _540  */
 
     self->SetStyle(style);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::SetStyle).\n";
@@ -432,23 +381,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_GetTextEntry(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41323
+   * id: _39284
    */
   if(args.Length() == 0) {
     
-
     wxTextEntry* returnVal = self->GetTextEntry();
 
     return scope.Close(wxNode_wxTextEntry::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::GetTextEntry).\n";
@@ -459,24 +404,20 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_SetCharIncludes(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41324
+   * id: _39285
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue chars(args[0]->ToString()); /* type: _14975  */
-    
+    v8::String::AsciiValue chars(args[0]->ToString()); /* type: _13556  */
 
     self->SetCharIncludes(*chars);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::SetCharIncludes).\n";
@@ -487,24 +428,20 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_SetIncludes(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41325
+   * id: _39286
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxArrayString::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxArrayString* includes = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArrayString>(args[0]->ToObject()); /* type: _20632  */
-    
+    wxNode_wxArrayString* includes = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArrayString>(args[0]->ToObject()); /* type: _19097  */
 
     self->SetIncludes(*includes);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::SetIncludes).\n";
@@ -515,23 +452,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_GetIncludes(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41326
+   * id: _39287
    */
   if(args.Length() == 0) {
     
-
     wxArrayString returnVal = self->GetIncludes();
 
     return scope.Close(wxNode_wxArrayString::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::GetIncludes).\n";
@@ -542,24 +475,20 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_SetCharExcludes(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41327
+   * id: _39288
    */
   if(args.Length() == 1 && args[0]->IsString()) {
-    v8::String::AsciiValue chars(args[0]->ToString()); /* type: _14975  */
-    
+    v8::String::AsciiValue chars(args[0]->ToString()); /* type: _13556  */
 
     self->SetCharExcludes(*chars);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::SetCharExcludes).\n";
@@ -570,24 +499,20 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_SetExcludes(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41328
+   * id: _39289
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxArrayString::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxArrayString* excludes = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArrayString>(args[0]->ToObject()); /* type: _20632  */
-    
+    wxNode_wxArrayString* excludes = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxArrayString>(args[0]->ToObject()); /* type: _19097  */
 
     self->SetExcludes(*excludes);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::SetExcludes).\n";
@@ -598,23 +523,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_GetExcludes(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41329
+   * id: _39290
    */
   if(args.Length() == 0) {
     
-
     wxArrayString returnVal = self->GetExcludes();
 
     return scope.Close(wxNode_wxArrayString::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::GetExcludes).\n";
@@ -625,24 +546,20 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_HasFlag(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41330
+   * id: _39291
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    wxTextValidatorStyle style = static_cast<wxTextValidatorStyle>(args[0]->ToInt32()->Value()); /* type: _3917  */
-    
+    wxTextValidatorStyle style = static_cast<wxTextValidatorStyle>(args[0]->ToInt32()->Value()); /* type: _3653  */
 
     bool returnVal = self->HasFlag(style);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::HasFlag).\n";
@@ -653,23 +570,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_GetClassInfo(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41335
+   * id: _39296
    */
   if(args.Length() == 0) {
     
-
     wxClassInfo* returnVal = self->GetClassInfo();
 
     return scope.Close(wxNode_wxClassInfo::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::GetClassInfo).\n";
@@ -680,23 +593,19 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxTextValidator::_wxCreateObject(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxTextValidator* self = unwrap<wxNode_wxTextValidator>(args.This());
 
-  
   /*
-   * id: _41336
+   * id: _39297
    */
   if(args.Length() == 0) {
     
-
     wxObject* returnVal = wxTextValidator::wxCreateObject();
 
     return scope.Close(wxNode_wxObject::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxTextValidator::wxCreateObject).\n";
@@ -707,6 +616,4 @@ wxNode_wxTextValidator::wxNode_wxTextValidator(wxTextValidator& val)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

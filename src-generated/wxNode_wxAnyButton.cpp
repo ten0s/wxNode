@@ -6,21 +6,16 @@
 #include "wxNode_wxBitmap.h"
 #include "wxNode_wxSize.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxAnyButton::s_ct;
 
-
-
 /*
- * id: _32562
+ * id: _16570
  */
 wxNode_wxAnyButton::wxNode_wxAnyButton()
   : wxAnyButton()
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxAnyButton::Init(v8::Handle<v8::Object> target) {
@@ -40,32 +35,30 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
 /*static*/ void wxNode_wxAnyButton::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxControl::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "setBitmap", _SetBitmap);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmap", _GetBitmap);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapLabel", _SetBitmapLabel);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapPressed", _SetBitmapPressed);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapDisabled", _SetBitmapDisabled);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapCurrent", _SetBitmapCurrent);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapFocus", _SetBitmapFocus);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmapLabel", _GetBitmapLabel);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmapPressed", _GetBitmapPressed);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmapDisabled", _GetBitmapDisabled);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmapCurrent", _GetBitmapCurrent);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmapFocus", _GetBitmapFocus);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapMargins", _SetBitmapMargins);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmapMargins", _GetBitmapMargins);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapPosition", _SetBitmapPosition);
-  NODE_SET_PROTOTYPE_METHOD(target, "shouldInheritColours", _ShouldInheritColours);
-  NODE_SET_PROTOTYPE_METHOD(target, "setImageLabel", _SetImageLabel);
-  NODE_SET_PROTOTYPE_METHOD(target, "setImageMargins", _SetImageMargins);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmapSelected", _GetBitmapSelected);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBitmapHover", _GetBitmapHover);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapSelected", _SetBitmapSelected);
-  NODE_SET_PROTOTYPE_METHOD(target, "setBitmapHover", _SetBitmapHover);
-  NODE_SET_PROTOTYPE_METHOD(target, "dontShowLabel", _DontShowLabel);
-  NODE_SET_PROTOTYPE_METHOD(target, "showsLabel", _ShowsLabel);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmap", _GetBitmap);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapLabel", _SetBitmapLabel);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapPressed", _SetBitmapPressed);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapDisabled", _SetBitmapDisabled);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapCurrent", _SetBitmapCurrent);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapFocus", _SetBitmapFocus);
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmapLabel", _GetBitmapLabel);
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmapPressed", _GetBitmapPressed);
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmapDisabled", _GetBitmapDisabled);
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmapCurrent", _GetBitmapCurrent);
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmapFocus", _GetBitmapFocus);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapMargins", _SetBitmapMargins);
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmapMargins", _GetBitmapMargins);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapPosition", _SetBitmapPosition);
+NODE_SET_PROTOTYPE_METHOD(target, "shouldInheritColours", _ShouldInheritColours);
+NODE_SET_PROTOTYPE_METHOD(target, "setImageLabel", _SetImageLabel);
+NODE_SET_PROTOTYPE_METHOD(target, "setImageMargins", _SetImageMargins);
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmapSelected", _GetBitmapSelected);
+NODE_SET_PROTOTYPE_METHOD(target, "getBitmapHover", _GetBitmapHover);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapSelected", _SetBitmapSelected);
+NODE_SET_PROTOTYPE_METHOD(target, "setBitmapHover", _SetBitmapHover);
+NODE_SET_PROTOTYPE_METHOD(target, "dontShowLabel", _DontShowLabel);
+NODE_SET_PROTOTYPE_METHOD(target, "showsLabel", _ShowsLabel);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::New(const wxNode_wxAnyButton* obj) {
   v8::HandleScope scope;
@@ -151,12 +144,12 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   if(!strcmp("GenericDirButton", className)) { return true; }
 
   if(!strcmp("DirButton", className)) { return true; }
+  if(!strcmp("FontButton", className)) { return true; }
   if(!strcmp("CommandLinkButtonBase", className)) { return true; }
 
   if(!strcmp("GenericCommandLinkButton", className)) { return true; }
 
   if(!strcmp("CommandLinkButton", className)) { return true; }
-  if(!strcmp("FontButton", className)) { return true; }
   if(!strcmp("ColourButton", className)) { return true; }
 
 
@@ -166,21 +159,16 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _32562
+   * id: _16570
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxAnyButton *self = new wxNode_wxAnyButton();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxAnyButton).\n";
@@ -192,37 +180,31 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmap(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37426
+   * id: _35445
    */
   if(args.Length() == 2 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber()) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    wxDirection dir = static_cast<wxDirection>(args[1]->ToInt32()->Value()); /* type: _10279  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
+wxDirection dir = static_cast<wxDirection>(args[1]->ToInt32()->Value()); /* type: _9379  */
 
     self->SetBitmap(*bitmap, dir);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37426
+   * id: _35445
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetBitmap(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmap).\n";
@@ -233,23 +215,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmap(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37427
+   * id: _35446
    */
   if(args.Length() == 0) {
     
-
     wxBitmap returnVal = self->GetBitmap();
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmap).\n";
@@ -260,24 +238,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapLabel(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37428
+   * id: _35447
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetBitmapLabel(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapLabel).\n";
@@ -288,24 +262,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapPressed(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37429
+   * id: _35448
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetBitmapPressed(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapPressed).\n";
@@ -316,24 +286,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapDisabled(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37430
+   * id: _35449
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetBitmapDisabled(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapDisabled).\n";
@@ -344,24 +310,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapCurrent(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37431
+   * id: _35450
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetBitmapCurrent(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapCurrent).\n";
@@ -372,24 +334,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapFocus(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37432
+   * id: _35451
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetBitmapFocus(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapFocus).\n";
@@ -400,23 +358,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmapLabel(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37433
+   * id: _35452
    */
   if(args.Length() == 0) {
     
-
     wxBitmap returnVal = self->GetBitmapLabel();
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmapLabel).\n";
@@ -427,23 +381,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmapPressed(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37434
+   * id: _35453
    */
   if(args.Length() == 0) {
     
-
     wxBitmap returnVal = self->GetBitmapPressed();
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmapPressed).\n";
@@ -454,23 +404,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmapDisabled(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37435
+   * id: _35454
    */
   if(args.Length() == 0) {
     
-
     wxBitmap returnVal = self->GetBitmapDisabled();
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmapDisabled).\n";
@@ -481,23 +427,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmapCurrent(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37436
+   * id: _35455
    */
   if(args.Length() == 0) {
     
-
     wxBitmap returnVal = self->GetBitmapCurrent();
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmapCurrent).\n";
@@ -508,23 +450,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmapFocus(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37437
+   * id: _35456
    */
   if(args.Length() == 0) {
     
-
     wxBitmap returnVal = self->GetBitmapFocus();
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmapFocus).\n";
@@ -535,37 +473,31 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapMargins(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37438
+   * id: _35457
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int x = (int)args[0]->ToInt32()->Value(); /* type: _12231  */
-    int y = (int)args[1]->ToInt32()->Value(); /* type: _12231  */
-    
+    int x = (int)args[0]->ToInt32()->Value(); /* type: _11133  */
+int y = (int)args[1]->ToInt32()->Value(); /* type: _11133  */
 
     self->SetBitmapMargins(x, y);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37439
+   * id: _35458
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->SetBitmapMargins(*sz);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapMargins).\n";
@@ -576,23 +508,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmapMargins(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37440
+   * id: _35459
    */
   if(args.Length() == 0) {
     
-
     wxSize returnVal = self->GetBitmapMargins();
 
     return scope.Close(wxNode_wxSize::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmapMargins).\n";
@@ -603,24 +531,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapPosition(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37441
+   * id: _35460
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    wxDirection dir = static_cast<wxDirection>(args[0]->ToInt32()->Value()); /* type: _10279  */
-    
+    wxDirection dir = static_cast<wxDirection>(args[0]->ToInt32()->Value()); /* type: _9379  */
 
     self->SetBitmapPosition(dir);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapPosition).\n";
@@ -631,23 +555,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_ShouldInheritColours(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37442
+   * id: _35461
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->ShouldInheritColours();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::ShouldInheritColours).\n";
@@ -658,24 +578,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetImageLabel(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37443
+   * id: _35462
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetImageLabel(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetImageLabel).\n";
@@ -686,25 +602,21 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetImageMargins(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37444
+   * id: _35463
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int x = (int)args[0]->ToInt32()->Value(); /* type: _12231  */
-    int y = (int)args[1]->ToInt32()->Value(); /* type: _12231  */
-    
+    int x = (int)args[0]->ToInt32()->Value(); /* type: _11133  */
+int y = (int)args[1]->ToInt32()->Value(); /* type: _11133  */
 
     self->SetImageMargins(x, y);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetImageMargins).\n";
@@ -715,23 +627,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmapSelected(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37445
+   * id: _35464
    */
   if(args.Length() == 0) {
     
-
     wxBitmap returnVal = self->GetBitmapSelected();
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmapSelected).\n";
@@ -742,23 +650,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_GetBitmapHover(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37446
+   * id: _35465
    */
   if(args.Length() == 0) {
     
-
     wxBitmap returnVal = self->GetBitmapHover();
 
     return scope.Close(wxNode_wxBitmap::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::GetBitmapHover).\n";
@@ -769,24 +673,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapSelected(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37447
+   * id: _35466
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetBitmapSelected(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapSelected).\n";
@@ -797,24 +697,20 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_SetBitmapHover(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37448
+   * id: _35467
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxBitmap::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _15645  */
-    
+    wxNode_wxBitmap* bitmap = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxBitmap>(args[0]->ToObject()); /* type: _14243  */
 
     self->SetBitmapHover(*bitmap);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::SetBitmapHover).\n";
@@ -825,23 +721,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_DontShowLabel(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37449
+   * id: _35468
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->DontShowLabel();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::DontShowLabel).\n";
@@ -852,23 +744,19 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxAnyButton::_ShowsLabel(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxAnyButton* self = unwrap<wxNode_wxAnyButton>(args.This());
 
-  
   /*
-   * id: _37450
+   * id: _35469
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->ShowsLabel();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxAnyButton::ShowsLabel).\n";
@@ -879,6 +767,4 @@ wxNode_wxAnyButton::wxNode_wxAnyButton()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

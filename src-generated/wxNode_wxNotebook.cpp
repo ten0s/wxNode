@@ -8,66 +8,56 @@
 #include "wxNode_wxSize.h"
 #include "wxNode_wxColour.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxNotebook::s_ct;
 
-
-
 /*
- * id: _31978
+ * id: _30199
  */
 wxNode_wxNotebook::wxNode_wxNotebook()
   : wxNotebook()
 {
 
 }
-
 /*
- * id: _31979
+ * id: _30200
  */
 wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id, wxPoint& pos, wxSize& size, long int style, const wxString& name)
   : wxNotebook(parent, id, pos, size, style, name)
 {
 
 }
-
 /*
- * id: _31979
+ * id: _30200
  */
 wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id, wxPoint& pos, wxSize& size, long int style)
   : wxNotebook(parent, id, pos, size, style)
 {
 
 }
-
 /*
- * id: _31979
+ * id: _30200
  */
 wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id, wxPoint& pos, wxSize& size)
   : wxNotebook(parent, id, pos, size)
 {
 
 }
-
 /*
- * id: _31979
+ * id: _30200
  */
 wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id, wxPoint& pos)
   : wxNotebook(parent, id, pos)
 {
 
 }
-
 /*
- * id: _31979
+ * id: _30200
  */
 wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   : wxNotebook(parent, id)
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxNotebook::Init(v8::Handle<v8::Object> target) {
@@ -87,16 +77,14 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
 /*static*/ void wxNode_wxNotebook::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxBookCtrlBase::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "getRowCount", _GetRowCount);
-  NODE_SET_PROTOTYPE_METHOD(target, "setPadding", _SetPadding);
-  NODE_SET_PROTOTYPE_METHOD(target, "setTabSize", _SetTabSize);
-  NODE_SET_PROTOTYPE_METHOD(target, "calcSizeFromPage", _CalcSizeFromPage);
-  NODE_SET_PROTOTYPE_METHOD(target, "getThemeBackgroundColour", _GetThemeBackgroundColour);
-  NODE_SET_PROTOTYPE_METHOD(target, "sendPageChangingEvent", _SendPageChangingEvent);
-  NODE_SET_PROTOTYPE_METHOD(target, "sendPageChangedEvent", _SendPageChangedEvent);
-  NODE_SET_PROTOTYPE_METHOD(target, "acceptsFocus", _AcceptsFocus);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "setPadding", _SetPadding);
+NODE_SET_PROTOTYPE_METHOD(target, "setTabSize", _SetTabSize);
+NODE_SET_PROTOTYPE_METHOD(target, "calcSizeFromPage", _CalcSizeFromPage);
+NODE_SET_PROTOTYPE_METHOD(target, "getThemeBackgroundColour", _GetThemeBackgroundColour);
+NODE_SET_PROTOTYPE_METHOD(target, "sendPageChangingEvent", _SendPageChangingEvent);
+NODE_SET_PROTOTYPE_METHOD(target, "sendPageChangedEvent", _SendPageChangedEvent);
+NODE_SET_PROTOTYPE_METHOD(target, "acceptsFocus", _AcceptsFocus);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::New(const wxNode_wxNotebook* obj) {
   v8::HandleScope scope;
@@ -167,101 +155,86 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _31978
+   * id: _30199
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxNotebook *self = new wxNode_wxNotebook();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _31979
+   * id: _30200
    */
   if(args.Length() == 6 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxPoint::AssignableFrom(args[2]->ToObject()->GetConstructorName()))) && (args[3]->IsNull() || (args[3]->IsObject() && wxNode_wxSize::AssignableFrom(args[3]->ToObject()->GetConstructorName()))) && args[4]->IsNumber() && args[5]->IsString()) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int id = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _20518  */
-    wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _20628  */
-    long int style = (long int)args[4]->ToInt32()->Value(); /* type: _592  */
-    v8::String::AsciiValue name(args[5]->ToString()); /* type: _14975  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int id = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
+wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _18992  */
+wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _19093  */
+long int style = (long int)args[4]->ToInt32()->Value(); /* type: _540  */
+v8::String::AsciiValue name(args[5]->ToString()); /* type: _13556  */
 
     wxNode_wxNotebook *self = new wxNode_wxNotebook(parent, id, *pos, *size, style, *name);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _31979
+   * id: _30200
    */
   if(args.Length() == 5 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxPoint::AssignableFrom(args[2]->ToObject()->GetConstructorName()))) && (args[3]->IsNull() || (args[3]->IsObject() && wxNode_wxSize::AssignableFrom(args[3]->ToObject()->GetConstructorName()))) && args[4]->IsNumber()) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int id = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _20518  */
-    wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _20628  */
-    long int style = (long int)args[4]->ToInt32()->Value(); /* type: _592  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int id = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
+wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _18992  */
+wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _19093  */
+long int style = (long int)args[4]->ToInt32()->Value(); /* type: _540  */
 
     wxNode_wxNotebook *self = new wxNode_wxNotebook(parent, id, *pos, *size, style);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _31979
+   * id: _30200
    */
   if(args.Length() == 4 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxPoint::AssignableFrom(args[2]->ToObject()->GetConstructorName()))) && (args[3]->IsNull() || (args[3]->IsObject() && wxNode_wxSize::AssignableFrom(args[3]->ToObject()->GetConstructorName())))) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int id = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _20518  */
-    wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int id = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
+wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _18992  */
+wxNode_wxSize* size = args[3]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[3]->ToObject()); /* type: _19093  */
 
     wxNode_wxNotebook *self = new wxNode_wxNotebook(parent, id, *pos, *size);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _31979
+   * id: _30200
    */
   if(args.Length() == 3 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber() && (args[2]->IsNull() || (args[2]->IsObject() && wxNode_wxPoint::AssignableFrom(args[2]->ToObject()->GetConstructorName())))) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int id = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _20518  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int id = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
+wxNode_wxPoint* pos = args[2]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxPoint>(args[2]->ToObject()); /* type: _18992  */
 
     wxNode_wxNotebook *self = new wxNode_wxNotebook(parent, id, *pos);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _31979
+   * id: _30200
    */
   if(args.Length() == 2 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsNumber()) {
-    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    int id = (int)args[1]->ToInt32()->Value(); /* type: _8725  */
-    
+    wxNode_wxWindow* parent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+int id = (int)args[1]->ToInt32()->Value(); /* type: _7944  */
 
     wxNode_wxNotebook *self = new wxNode_wxNotebook(parent, id);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxNotebook).\n";
@@ -273,23 +246,19 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_GetRowCount(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNotebook* self = unwrap<wxNode_wxNotebook>(args.This());
 
-  
   /*
-   * id: _37167
+   * id: _35231
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetRowCount();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNotebook::GetRowCount).\n";
@@ -300,24 +269,20 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_SetPadding(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNotebook* self = unwrap<wxNode_wxNotebook>(args.This());
 
-  
   /*
-   * id: _37168
+   * id: _35232
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* padding = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* padding = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->SetPadding(*padding);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNotebook::SetPadding).\n";
@@ -328,24 +293,20 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_SetTabSize(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNotebook* self = unwrap<wxNode_wxNotebook>(args.This());
 
-  
   /*
-   * id: _37169
+   * id: _35233
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* sz = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     self->SetTabSize(*sz);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNotebook::SetTabSize).\n";
@@ -356,24 +317,20 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_CalcSizeFromPage(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNotebook* self = unwrap<wxNode_wxNotebook>(args.This());
 
-  
   /*
-   * id: _37170
+   * id: _35234
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSize::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSize* sizePage = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _20628  */
-    
+    wxNode_wxSize* sizePage = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSize>(args[0]->ToObject()); /* type: _19093  */
 
     wxSize returnVal = self->CalcSizeFromPage(*sizePage);
 
     return scope.Close(wxNode_wxSize::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNotebook::CalcSizeFromPage).\n";
@@ -384,23 +341,19 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_GetThemeBackgroundColour(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNotebook* self = unwrap<wxNode_wxNotebook>(args.This());
 
-  
   /*
-   * id: _37171
+   * id: _35235
    */
   if(args.Length() == 0) {
     
-
     wxColour returnVal = self->GetThemeBackgroundColour();
 
     return scope.Close(wxNode_wxColour::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNotebook::GetThemeBackgroundColour).\n";
@@ -411,24 +364,20 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_SendPageChangingEvent(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNotebook* self = unwrap<wxNode_wxNotebook>(args.This());
 
-  
   /*
-   * id: _37172
+   * id: _35236
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int nPage = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int nPage = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     bool returnVal = self->SendPageChangingEvent(nPage);
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNotebook::SendPageChangingEvent).\n";
@@ -439,37 +388,31 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_SendPageChangedEvent(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNotebook* self = unwrap<wxNode_wxNotebook>(args.This());
 
-  
   /*
-   * id: _37173
+   * id: _35237
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int nPageOld = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    int nPageNew = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    int nPageOld = (int)args[0]->ToInt32()->Value(); /* type: _142  */
+int nPageNew = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     self->SendPageChangedEvent(nPageOld, nPageNew);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _37173
+   * id: _35237
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int nPageOld = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int nPageOld = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     self->SendPageChangedEvent(nPageOld);
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNotebook::SendPageChangedEvent).\n";
@@ -480,23 +423,19 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxNotebook::_AcceptsFocus(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxNotebook* self = unwrap<wxNode_wxNotebook>(args.This());
 
-  
   /*
-   * id: _37174
+   * id: _35238
    */
   if(args.Length() == 0) {
     
-
     bool returnVal = self->AcceptsFocus();
 
     return scope.Close(v8::Boolean::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxNotebook::AcceptsFocus).\n";
@@ -507,6 +446,4 @@ wxNode_wxNotebook::wxNode_wxNotebook(wxWindow* parent, int id)
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

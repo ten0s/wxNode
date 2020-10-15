@@ -2,39 +2,32 @@
 #include <sstream>
 #include "wxNode_wxSizerFlags.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxSizerFlags::s_ct;
 
-
-
 /*
- * id: _40880
+ * id: _38853
  */
 wxNode_wxSizerFlags::wxNode_wxSizerFlags(wxSizerFlags& arg0)
   : wxSizerFlags(arg0)
 {
 
 }
-
 /*
- * id: _40881
+ * id: _38854
  */
 wxNode_wxSizerFlags::wxNode_wxSizerFlags(int proportion)
   : wxSizerFlags(proportion)
 {
 
 }
-
 /*
- * id: _40881
+ * id: _38854
  */
 wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   : wxSizerFlags()
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxSizerFlags::Init(v8::Handle<v8::Object> target) {
@@ -54,29 +47,27 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
 /*static*/ void wxNode_wxSizerFlags::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxEvtHandler::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "proportion", _Proportion);
-  NODE_SET_PROTOTYPE_METHOD(target, "expand", _Expand);
-  NODE_SET_PROTOTYPE_METHOD(target, "align", _Align);
-  NODE_SET_PROTOTYPE_METHOD(target, "centre", _Centre);
-  NODE_SET_PROTOTYPE_METHOD(target, "center", _Center);
-  NODE_SET_PROTOTYPE_METHOD(target, "top", _Top);
-  NODE_SET_PROTOTYPE_METHOD(target, "left", _Left);
-  NODE_SET_PROTOTYPE_METHOD(target, "right", _Right);
-  NODE_SET_PROTOTYPE_METHOD(target, "bottom", _Bottom);
-  NODE_SET_METHOD(target, "getDefaultBorder", _GetDefaultBorder);
-  NODE_SET_PROTOTYPE_METHOD(target, "border", _Border);
-  NODE_SET_PROTOTYPE_METHOD(target, "doubleBorder", _DoubleBorder);
-  NODE_SET_PROTOTYPE_METHOD(target, "tripleBorder", _TripleBorder);
-  NODE_SET_PROTOTYPE_METHOD(target, "horzBorder", _HorzBorder);
-  NODE_SET_PROTOTYPE_METHOD(target, "doubleHorzBorder", _DoubleHorzBorder);
-  NODE_SET_PROTOTYPE_METHOD(target, "shaped", _Shaped);
-  NODE_SET_PROTOTYPE_METHOD(target, "fixedMinSize", _FixedMinSize);
-  NODE_SET_PROTOTYPE_METHOD(target, "reserveSpaceEvenIfHidden", _ReserveSpaceEvenIfHidden);
-  NODE_SET_PROTOTYPE_METHOD(target, "getProportion", _GetProportion);
-  NODE_SET_PROTOTYPE_METHOD(target, "getFlags", _GetFlags);
-  NODE_SET_PROTOTYPE_METHOD(target, "getBorderInPixels", _GetBorderInPixels);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "expand", _Expand);
+NODE_SET_PROTOTYPE_METHOD(target, "align", _Align);
+NODE_SET_PROTOTYPE_METHOD(target, "centre", _Centre);
+NODE_SET_PROTOTYPE_METHOD(target, "center", _Center);
+NODE_SET_PROTOTYPE_METHOD(target, "top", _Top);
+NODE_SET_PROTOTYPE_METHOD(target, "left", _Left);
+NODE_SET_PROTOTYPE_METHOD(target, "right", _Right);
+NODE_SET_PROTOTYPE_METHOD(target, "bottom", _Bottom);
+NODE_SET_METHOD(target, "getDefaultBorder", _GetDefaultBorder);
+NODE_SET_PROTOTYPE_METHOD(target, "border", _Border);
+NODE_SET_PROTOTYPE_METHOD(target, "doubleBorder", _DoubleBorder);
+NODE_SET_PROTOTYPE_METHOD(target, "tripleBorder", _TripleBorder);
+NODE_SET_PROTOTYPE_METHOD(target, "horzBorder", _HorzBorder);
+NODE_SET_PROTOTYPE_METHOD(target, "doubleHorzBorder", _DoubleHorzBorder);
+NODE_SET_PROTOTYPE_METHOD(target, "shaped", _Shaped);
+NODE_SET_PROTOTYPE_METHOD(target, "fixedMinSize", _FixedMinSize);
+NODE_SET_PROTOTYPE_METHOD(target, "reserveSpaceEvenIfHidden", _ReserveSpaceEvenIfHidden);
+NODE_SET_PROTOTYPE_METHOD(target, "getProportion", _GetProportion);
+NODE_SET_PROTOTYPE_METHOD(target, "getFlags", _GetFlags);
+NODE_SET_PROTOTYPE_METHOD(target, "getBorderInPixels", _GetBorderInPixels);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::New(const wxNode_wxSizerFlags* obj) {
   v8::HandleScope scope;
@@ -145,47 +136,38 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _40880
+   * id: _38853
    */
   if(args.Length() == 1 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxSizerFlags::AssignableFrom(args[0]->ToObject()->GetConstructorName())))) {
-    wxNode_wxSizerFlags* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSizerFlags>(args[0]->ToObject()); /* type: _58914  */
-    
+    wxNode_wxSizerFlags* arg0 = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxSizerFlags>(args[0]->ToObject()); /* type: _56751  */
 
     wxNode_wxSizerFlags *self = new wxNode_wxSizerFlags(*arg0);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _40881
+   * id: _38854
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int proportion = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int proportion = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     wxNode_wxSizerFlags *self = new wxNode_wxSizerFlags(proportion);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _40881
+   * id: _38854
    */
   if(args.Length() == 0) {
     
-
     wxNode_wxSizerFlags *self = new wxNode_wxSizerFlags();
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxSizerFlags).\n";
@@ -197,24 +179,20 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Proportion(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40882
+   * id: _38855
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int proportion = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int proportion = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     wxSizerFlags returnVal = self->Proportion(proportion);
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Proportion).\n";
@@ -225,23 +203,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Expand(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40883
+   * id: _38856
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Expand();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Expand).\n";
@@ -252,24 +226,20 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Align(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40884
+   * id: _38857
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int alignment = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int alignment = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     wxSizerFlags returnVal = self->Align(alignment);
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Align).\n";
@@ -280,23 +250,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Centre(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40885
+   * id: _38858
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Centre();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Centre).\n";
@@ -307,23 +273,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Center(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40886
+   * id: _38859
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Center();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Center).\n";
@@ -334,23 +296,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Top(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40887
+   * id: _38860
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Top();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Top).\n";
@@ -361,23 +319,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Left(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40888
+   * id: _38861
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Left();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Left).\n";
@@ -388,23 +342,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Right(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40889
+   * id: _38862
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Right();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Right).\n";
@@ -415,23 +365,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Bottom(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40890
+   * id: _38863
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Bottom();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Bottom).\n";
@@ -442,23 +388,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_GetDefaultBorder(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40891
+   * id: _38864
    */
   if(args.Length() == 0) {
     
-
     int returnVal = wxSizerFlags::GetDefaultBorder();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::GetDefaultBorder).\n";
@@ -469,48 +411,40 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Border(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40892
+   * id: _38865
    */
   if(args.Length() == 2 && args[0]->IsNumber() && args[1]->IsNumber()) {
-    int direction = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    int borderInPixels = (int)args[1]->ToInt32()->Value(); /* type: _165  */
-    
+    int direction = (int)args[0]->ToInt32()->Value(); /* type: _142  */
+int borderInPixels = (int)args[1]->ToInt32()->Value(); /* type: _142  */
 
     wxSizerFlags returnVal = self->Border(direction, borderInPixels);
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
   /*
-   * id: _40893
+   * id: _38866
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int direction = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int direction = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     wxSizerFlags returnVal = self->Border(direction);
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
   /*
-   * id: _40893
+   * id: _38866
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Border();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Border).\n";
@@ -521,35 +455,29 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_DoubleBorder(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40894
+   * id: _38867
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int direction = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int direction = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     wxSizerFlags returnVal = self->DoubleBorder(direction);
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
   /*
-   * id: _40894
+   * id: _38867
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->DoubleBorder();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::DoubleBorder).\n";
@@ -560,35 +488,29 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_TripleBorder(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40895
+   * id: _38868
    */
   if(args.Length() == 1 && args[0]->IsNumber()) {
-    int direction = (int)args[0]->ToInt32()->Value(); /* type: _165  */
-    
+    int direction = (int)args[0]->ToInt32()->Value(); /* type: _142  */
 
     wxSizerFlags returnVal = self->TripleBorder(direction);
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
   /*
-   * id: _40895
+   * id: _38868
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->TripleBorder();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::TripleBorder).\n";
@@ -599,23 +521,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_HorzBorder(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40896
+   * id: _38869
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->HorzBorder();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::HorzBorder).\n";
@@ -626,23 +544,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_DoubleHorzBorder(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40897
+   * id: _38870
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->DoubleHorzBorder();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::DoubleHorzBorder).\n";
@@ -653,23 +567,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_Shaped(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40898
+   * id: _38871
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->Shaped();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::Shaped).\n";
@@ -680,23 +590,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_FixedMinSize(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40899
+   * id: _38872
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->FixedMinSize();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::FixedMinSize).\n";
@@ -707,23 +613,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_ReserveSpaceEvenIfHidden(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40900
+   * id: _38873
    */
   if(args.Length() == 0) {
     
-
     wxSizerFlags returnVal = self->ReserveSpaceEvenIfHidden();
 
     return scope.Close(wxNode_wxSizerFlags::NewCopy(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::ReserveSpaceEvenIfHidden).\n";
@@ -734,23 +636,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_GetProportion(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40901
+   * id: _38874
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetProportion();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::GetProportion).\n";
@@ -761,23 +659,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_GetFlags(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40902
+   * id: _38875
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetFlags();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::GetFlags).\n";
@@ -788,23 +682,19 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxSizerFlags::_GetBorderInPixels(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxSizerFlags* self = unwrap<wxNode_wxSizerFlags>(args.This());
 
-  
   /*
-   * id: _40903
+   * id: _38876
    */
   if(args.Length() == 0) {
     
-
     int returnVal = self->GetBorderInPixels();
 
     return scope.Close(v8::Number::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxSizerFlags::GetBorderInPixels).\n";
@@ -815,6 +705,4 @@ wxNode_wxSizerFlags::wxNode_wxSizerFlags()
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 

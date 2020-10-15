@@ -8,7 +8,6 @@ class wxNode_wxEvtHandler;
 class wxNode_wxControl;
 class wxNode_wxWindow;
 
-
 class wxNode_wxInfoBar : public wxInfoBar, public wxNodeObject, public NodeExEvtHandlerImpl {
 public:
   static void Init(v8::Handle<v8::Object> target);
@@ -20,26 +19,18 @@ public:
   static v8::Handle<v8::Value> New(const wxNode_wxInfoBar* obj);
   static v8::Handle<v8::Value> NewCopy(const wxInfoBar& obj);
 
-  
-  
   wxNode_wxInfoBar();
-  
   wxNode_wxInfoBar(wxWindow* parent, int winid);
-  
   wxNode_wxInfoBar(wxWindow* parent);
-  
-  
 
 private:
   static v8::Handle<v8::Value> _init(const v8::Arguments& args);
 
   static v8::Handle<v8::Value> _ShowMessage(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _Dismiss(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _AddButton(const v8::Arguments& args);
-  static v8::Handle<v8::Value> _RemoveButton(const v8::Arguments& args);
+static v8::Handle<v8::Value> _Dismiss(const v8::Arguments& args);
+static v8::Handle<v8::Value> _AddButton(const v8::Arguments& args);
+static v8::Handle<v8::Value> _RemoveButton(const v8::Arguments& args);
   
-  
-
   static v8::Persistent<v8::FunctionTemplate> s_ct;
 };
 

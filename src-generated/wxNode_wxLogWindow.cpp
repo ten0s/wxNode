@@ -6,39 +6,32 @@
 #include "wxNode_wxWindow.h"
 #include "wxNode_wxFrame.h"
 
-
 /* static */ v8::Persistent<v8::FunctionTemplate> wxNode_wxLogWindow::s_ct;
 
-
-
 /*
- * id: _52979
+ * id: _50949
  */
 wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitle, bool bShow, bool bPassToOld)
   : wxLogWindow(pParent, szTitle, bShow, bPassToOld)
 {
 
 }
-
 /*
- * id: _52979
+ * id: _50949
  */
 wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitle, bool bShow)
   : wxLogWindow(pParent, szTitle, bShow)
 {
 
 }
-
 /*
- * id: _52979
+ * id: _50949
  */
 wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitle)
   : wxLogWindow(pParent, szTitle)
 {
 
 }
-
-
 
 
 /*static*/ void wxNode_wxLogWindow::Init(v8::Handle<v8::Object> target) {
@@ -58,13 +51,11 @@ wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitl
 /*static*/ void wxNode_wxLogWindow::AddMethods(v8::Handle<v8::FunctionTemplate> target) {
   wxNode_wxLogInterposer::AddMethods(target);
   NODE_SET_PROTOTYPE_METHOD(target, "show", _Show);
-  NODE_SET_PROTOTYPE_METHOD(target, "getFrame", _GetFrame);
-  NODE_SET_PROTOTYPE_METHOD(target, "onFrameCreate", _OnFrameCreate);
-  NODE_SET_PROTOTYPE_METHOD(target, "onFrameClose", _OnFrameClose);
-  NODE_SET_PROTOTYPE_METHOD(target, "onFrameDelete", _OnFrameDelete);
-  
-  
-}
+NODE_SET_PROTOTYPE_METHOD(target, "getFrame", _GetFrame);
+NODE_SET_PROTOTYPE_METHOD(target, "onFrameCreate", _OnFrameCreate);
+NODE_SET_PROTOTYPE_METHOD(target, "onFrameClose", _OnFrameClose);
+NODE_SET_PROTOTYPE_METHOD(target, "onFrameDelete", _OnFrameDelete);
+  }
 
 /*static*/ v8::Handle<v8::Value> wxNode_wxLogWindow::New(const wxNode_wxLogWindow* obj) {
   v8::HandleScope scope;
@@ -129,54 +120,45 @@ wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitl
 /*static*/ v8::Handle<v8::Value> wxNode_wxLogWindow::_init(const v8::Arguments& args) {
   v8::HandleScope scope;
 
-  
-  
   /*
-   * id: _52979
+   * id: _50949
    */
   if(args.Length() == 4 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsString() && args[2]->IsBoolean() && args[3]->IsBoolean()) {
-    wxNode_wxWindow* pParent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue szTitle(args[1]->ToString()); /* type: _14975  */
-    bool bShow = args[2]->ToBoolean()->Value(); /* type: _14830  */
-    bool bPassToOld = args[3]->ToBoolean()->Value(); /* type: _14830  */
-    
+    wxNode_wxWindow* pParent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue szTitle(args[1]->ToString()); /* type: _13556  */
+bool bShow = args[2]->ToBoolean()->Value(); /* type: _13422  */
+bool bPassToOld = args[3]->ToBoolean()->Value(); /* type: _13422  */
 
     wxNode_wxLogWindow *self = new wxNode_wxLogWindow(pParent, *szTitle, bShow, bPassToOld);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _52979
+   * id: _50949
    */
   if(args.Length() == 3 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsString() && args[2]->IsBoolean()) {
-    wxNode_wxWindow* pParent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue szTitle(args[1]->ToString()); /* type: _14975  */
-    bool bShow = args[2]->ToBoolean()->Value(); /* type: _14830  */
-    
+    wxNode_wxWindow* pParent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue szTitle(args[1]->ToString()); /* type: _13556  */
+bool bShow = args[2]->ToBoolean()->Value(); /* type: _13422  */
 
     wxNode_wxLogWindow *self = new wxNode_wxLogWindow(pParent, *szTitle, bShow);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
   /*
-   * id: _52979
+   * id: _50949
    */
   if(args.Length() == 2 && (args[0]->IsNull() || (args[0]->IsObject() && wxNode_wxWindow::AssignableFrom(args[0]->ToObject()->GetConstructorName()))) && args[1]->IsString()) {
-    wxNode_wxWindow* pParent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _1000 * */
-    v8::String::AsciiValue szTitle(args[1]->ToString()); /* type: _14975  */
-    
+    wxNode_wxWindow* pParent = args[0]->IsNull() ? NULL : wxNodeObject::unwrap<wxNode_wxWindow>(args[0]->ToObject()); /* type: _920 * */
+v8::String::AsciiValue szTitle(args[1]->ToString()); /* type: _13556  */
 
     wxNode_wxLogWindow *self = new wxNode_wxLogWindow(pParent, *szTitle);
     NodeExEvtHandlerImpl* evtHandler = dynamic_cast<NodeExEvtHandlerImpl*>(self);
     self->wrap(args.This(), self, evtHandler);
     return args.This();
   }
-  
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching constructor for arguments (class name: wxLogWindow).\n";
@@ -188,35 +170,29 @@ wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitl
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
 
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxLogWindow::_Show(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxLogWindow* self = unwrap<wxNode_wxLogWindow>(args.This());
 
-  
   /*
-   * id: _52981
+   * id: _50951
    */
   if(args.Length() == 1 && args[0]->IsBoolean()) {
-    bool bShow = args[0]->ToBoolean()->Value(); /* type: _14830  */
-    
+    bool bShow = args[0]->ToBoolean()->Value(); /* type: _13422  */
 
     self->Show(bShow);
 
     return v8::Undefined();
   }
-  
   /*
-   * id: _52981
+   * id: _50951
    */
   if(args.Length() == 0) {
     
-
     self->Show();
 
     return v8::Undefined();
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxLogWindow::Show).\n";
@@ -227,23 +203,19 @@ wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitl
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxLogWindow::_GetFrame(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxLogWindow* self = unwrap<wxNode_wxLogWindow>(args.This());
 
-  
   /*
-   * id: _52982
+   * id: _50952
    */
   if(args.Length() == 0) {
     
-
     wxFrame* returnVal = self->GetFrame();
 
     return scope.Close(wxNode_wxFrame::New(returnVal));
   }
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxLogWindow::GetFrame).\n";
@@ -254,12 +226,10 @@ wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitl
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxLogWindow::_OnFrameCreate(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxLogWindow* self = unwrap<wxNode_wxLogWindow>(args.This());
 
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxLogWindow::OnFrameCreate).\n";
@@ -270,12 +240,10 @@ wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitl
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxLogWindow::_OnFrameClose(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxLogWindow* self = unwrap<wxNode_wxLogWindow>(args.This());
 
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxLogWindow::OnFrameClose).\n";
@@ -286,12 +254,10 @@ wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitl
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
 /*static*/ v8::Handle<v8::Value> wxNode_wxLogWindow::_OnFrameDelete(const v8::Arguments& args) {
   v8::HandleScope scope;
   wxNode_wxLogWindow* self = unwrap<wxNode_wxLogWindow>(args.This());
 
-  
 
   std::ostringstream errStr;
   errStr << "Could not find matching method for arguments (method name: wxLogWindow::OnFrameDelete).\n";
@@ -302,6 +268,4 @@ wxNode_wxLogWindow::wxNode_wxLogWindow(wxWindow* pParent, const wxString& szTitl
   }
   return v8::ThrowException(v8::Exception::TypeError(v8::String::New(errStr.str().c_str())));
 }
-
-
 
